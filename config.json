@@ -1,29 +1,29 @@
-{
-		"xbackendLocation":     "http://127.0.0.1:2411",
-		"backendLocation":      "https://api.beratungsnetz-migration.de",
-		"publicItems":          "https://public.beratungsnetz-migration.de",
-		"xpublicItems":         "http://127.0.0.1:3001/items",
-		"statsLocation":        "https://stats.beratungsnetz-migration.de",
-		"frontendLocation":     "https://www.beratungsnetz-migration.de",
-		"block":                "",
-		"title":                "Berliner Beratungsnetz für Zugewanderte",
-		"disableLists":         true,
-		"languages":            ["de", "en", "none"],
-		"activeIconColor":      "#659FD8",
-		"plainIconColor":       "#666666",
-		"pages":                        ["home", "tags", "about", "corona", "news", "legal", "contact", "tiles", "emergency", "manual"],
-		"map":{
-				"center":               [52.518611,13.408333],
-				"zoom":                 10,
-				"minZoom":              11,
-				"maxZoom":              18,
-				"maxBounds":            [[52.8,13.8],[52.2,13]],
-				"maxClusterRadius":     60,
+
+                "xbackendLocation":     "http://78.46.152.176:8018",
+                "backendLocation":      "http://78.46.152.176:9013",
+                "xpublicItems":         "http://127.0.0.1:3001/items",
+                "xstatsLocation":        "https://stats.beratungsnetz-migration.de",
+                "xfrontendLocation":     "https://www.beratungsnetz-migration.de",
+                "block":                "",
+                "title":                "PA",
+                "disableLists":         true,
+                "languages":            ["de", "none"],
+                "activeIconColor":      "#084c8e",
+                "plainIconColor":       "#666666",
+                "pages":                        ["home", "tags", "about", "corona", "news", "legal", "contact", "tiles", "emergency", "manual"],
+                "map":{
+                                "center":               [52.518611,13.408333],
+                                "zoom":                 10,
+                                "minZoom":              11,
+                                "maxZoom":              18,
+                                "maxBounds":            [[52.8,13.8],[52.2,13]],
+                                "maxClusterRadius":     60,
+
 				"tiles":		"https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicmhvdGVwIiwiYSI6ImNqMGRib2dmYTAwMGEzMnBkNDBuZ2dqMHMifQ.LNUbADugC76iQ91I73xFwg"
 		},
 		"sharing": {
 				"twitter": {
-						"hashtag": "test"
+						"hashtag": ""
 				},
 				"facebook": true,
 				"whatsapp": true,

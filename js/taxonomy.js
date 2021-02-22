@@ -1,42 +1,48 @@
 (function(exports){
 
 
+
 	exports.categories = [
 		{
-			name:	'accomodation',
-			colors:	['#FA9A20'],
+			name:	'labour',		//Arbeit und Beschäftigung,
+			colors:	['#438eba'],
 			tags: 	[]
 		},
 		{
-			name:	'addiction',
-			colors:	['#65B2B7'],
-			tags:	[],
-		},
-		{
-			name:	'asylum_counseling',
-			colors:	['#66B2FF'],
-			tags: 	[]
+			name:	'care',			//Ältere Menschen und Pflege
+			colors:	['#999'],
+			tags:	[]
 		},
 		// {
-		// 	name:	'care',
-		// 	colors:	['#999'],
-		// 	tags:	[]
+		// 	name:	'accomodation',
+		// 	colors:	['#FA9A20'],
+		// 	tags: 	[]
+		// },
+		// {
+		// 	name:	'addiction',
+		// 	colors:	['#65B2B7'],
+		// 	tags:	[],
+		// },
+		// {
+		// 	name:	'asylum_counseling',
+		// 	colors:	['#66B2FF'],
+		// 	tags: 	[]
 		// },
 		// {
 		// 	name:	'debt',
 		// 	colors:	['#999'],
 		// 	tags:	[]
 		// },
-		{
-			name:	'disability',
-			colors:	['#BC8BD8'],
-			tags:	[]
-		},
-		{
-			name:	'discrimination',
-			colors:	['#D69255'],
-			tags: 	[]
-		},
+		// {
+		// 	name:	'disability',
+		// 	colors:	['#BC8BD8'],
+		// 	tags:	[]
+		// },
+		// {
+		// 	name:	'discrimination',
+		// 	colors:	['#D69255'],
+		// 	tags: 	[]
+		// },
 		// {
 		// 	name:	'family_conflicts',
 		// 	colors:	['#999'],
@@ -47,21 +53,16 @@
 		// 	colors:	['#999'],
 		// 	tags: 	[]
 		// },
-		{
-			name:	'health',
-			colors:	['#53C294'],
-			tags: 	['mental_health', 'sti', 'pregnancy', 'care']
-		},
-		{
-			name:	'labour',
-			colors:	['#438eba'],
-			tags: 	[]
-		},
-		{
-			name:	'migration_counseling',
-			colors:	['#E25C56'],
-			tags: 	[]
-		},
+		// {
+		// 	name:	'health',
+		// 	colors:	['#53C294'],
+		// 	tags: 	['mental_health', 'sti', 'pregnancy', 'care']
+		// },
+		// {
+		// 	name:	'migration_counseling',
+		// 	colors:	['#E25C56'],
+		// 	tags: 	[]
+		// },
 		// {
 		// 	name:	'mental_health',
 		// 	colors:	['#999'],
@@ -87,40 +88,40 @@
 		// 	colors:	['#999'],
 		// 	tags: 	[]
 		// },
-		{
-			name:	'support',
-			colors:	['#9FC060'],
-			tags: 	[]
-		},
-		{
-			name:	'violence',
-			colors:	['#DBC10C'],
-			tags: 	[]
-		},
+		// {
+		// 	name:	'support',
+		// 	colors:	['#9FC060'],
+		// 	tags: 	[]
+		// },
+		// {
+		// 	name:	'violence',
+		// 	colors:	['#DBC10C'],
+		// 	tags: 	[]
+		// },
 
 
-		{
-			name:	'misc_category',
-			colors:	['#9CAEC2'],
-			tags: 	['debt', 'family_conflicts', 'felony', 'sex_work', 'sport',  'benn']
-		}
+		// {
+		// 	name:	'misc_category',
+		// 	colors:	['#9CAEC2'],
+		// 	tags: 	['debt', 'family_conflicts', 'felony', 'sex_work', 'sport',  'benn']
+		// }
 
 	]
 
 	exports.types = []
 
 	exports.tags = {
-		target_groups: [
-			'young',
-			'women',
-			'asylum_seekers',
-			'eu_citizens',
-			'no_health_ensurance',
-			'houseless',
-			'lgbtiq',
-			'misc_target',
-			'elderly'
-		],	
+		// target_groups: [
+		// 	'young',
+		// 	'women',
+		// 	'asylum_seekers',
+		// 	'eu_citizens',
+		// 	'no_health_ensurance',
+		// 	'houseless',
+		// 	'lgbtiq',
+		// 	'misc_target',
+		// 	'elderly'
+		// ],	
 		districts: [
 			'mitte',
 			'friedrichshain_kreuzberg',
