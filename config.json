@@ -1,9 +1,7 @@
 {
-                "xbackendLocation":     "http://78.46.152.176:8018",
-                "backendLocation":      "http://78.46.152.176:9013",
-                "xpublicItems":         "http://127.0.0.1:3001/items",
+                "backendLocation":      "http://api.paritaet.place-making.org",
                 "xstatsLocation":        "https://stats.beratungsnetz-migration.de",
-                "xfrontendLocation":     "https://www.beratungsnetz-migration.de",
+                "frontendLocation":     "https://paritaet.place-making.org",
                 "block":                "",
                 "title":                "PA",
                 "disableLists":         true,
