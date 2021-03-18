@@ -1,6 +1,6 @@
 {
-                "backendLocation":      "http://api.paritaet.place-making.org",
-                "xstatsLocation":        "https://stats.beratungsnetz-migration.de",
+                "backendLocation":      "https://api.paritaet.place-making.org",
+                "xstatsLocation":       "https://stats.beratungsnetz-migration.de",
                 "frontendLocation":     "https://paritaet.place-making.org",
                 "block":                "",
                 "title":                "PA",
