@@ -135,13 +135,59 @@
 				ic-options					= "ic.taxonomy.categories | mapToKey : 'name' | preventLoop"
 				ic-option-label				= "'CATEGORIES.%s' | fill: option | translate"
 				ic-option-icon-class		= "'icon-category-' + option"
-				ic-allow-multiple-choices	= "false"
+				ic-allow-multiple-choices	= "true"
 				ic-force-choice				= "true"
 				ic-key						= "tags"
 			></ic-item-property-edit>
 		</div>
 	</article>
 
+
+
+	<!-- primary category -->
+
+	<article >
+		<div> <!-- spacer --> </div>
+		<div>
+			<h4> {{'ITEMS.PRIMARY_TOPIC' | translate}}</h4>
+
+
+			<ic-item-property-edit
+				ic-item						= "icItem"
+				ic-type						= "string"
+				ic-translation-key			= "PRIMARY_TOPIC"
+				ic-options					= "icEdit.tags | section : (ic.taxonomy.categories | mapToKey: 'name') | preventLoop"
+				ic-option-label				= "'CATEGORIES.%s' | fill: option | translate"
+				ic-option-icon-class		= "'icon-category-' + option"
+				ic-allow-multiple-choices	= "false"
+				ic-force-choice				= "true"
+				ic-key						= "primaryTopic"
+			></ic-item-property-edit>
+		</div>
+	</article>
+
+
+
+	<!-- tags/targetGroups -->
+
+	<article>
+		<div> <!-- spacer --> </div>
+		<div>
+			<h4> {{'ITEMS.TAGS_TARGET_GROUPS' | translate}}</h4>
+
+			<ic-help ic-message = "ITEMS.TARGET_GROUPS_HELP"></ic-help>
+
+			<ic-item-property-edit
+				ic-item						= "icItem"
+				ic-type						= "array"
+				ic-translation-key			= "TARGET_GROUPS"
+				ic-options					= "ic.taxonomy.tags.target_groups"
+				ic-option-label				= "'UNSORTED_TAGS.%s' | fill: option | translate"
+				ic-allow-multiple-choices	= "true"
+				ic-key						= "tags"
+			></ic-item-property-edit>
+		</div>
+	</article>
 
 	<!-- tags/unsorted -->
 

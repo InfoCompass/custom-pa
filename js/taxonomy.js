@@ -98,6 +98,7 @@
 	exports.types = []
 
 	exports.tags = {
+
 		target_groups: [
 			'senior_citizens',			//Ältere Menschen
 			'families',					//Familien
