@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <polygon id="a" points="0 22 22 22 22 0 0 0"/>
+  </defs>
+  <g fill="none" fill-rule="evenodd" transform="translate(1 1)">
+    <path fill="#000000" d="M11,15 C8.791,15 7,13.209 7,11 C7,8.791 8.791,7 11,7 C13.209,7 15,8.791 15,11 C15,13.209 13.209,15 11,15 M11,6 C8.238,6 6,8.238 6,11 C6,13.762 8.238,16 11,16 C13.762,16 16,13.762 16,11 C16,8.238 13.762,6 11,6"/>
+    <mask id="b" fill="white">
+      <use xlink:href="#a"/>
+    </mask>
+    <polygon fill="#000000" points="0 11.5 4 11.5 4 10.5 0 10.5" mask="url(#b)"/>
+    <polygon fill="#000000" points="18 11.5 22 11.5 22 10.5 18 10.5" mask="url(#b)"/>
+    <polygon fill="#000000" points="10.5 4 11.5 4 11.5 0 10.5 0" mask="url(#b)"/>
+    <polygon fill="#000000" points="10.5 22 11.5 22 11.5 18 10.5 18" mask="url(#b)"/>
+    <polygon fill="#000000" points="3.575 19.132 6.404 16.304 5.696 15.597 2.868 18.425" mask="url(#b)"/>
+    <polygon fill="#000000" points="19.132 3.575 16.304 6.404 15.597 5.696 18.425 2.868" mask="url(#b)"/>
+    <polygon fill="#000000" points="6.404 5.696 5.696 6.404 2.868 3.575 3.575 2.868" mask="url(#b)"/>
+    <polygon fill="#000000" points="19.132 18.425 18.425 19.132 15.597 16.304 16.304 15.597" mask="url(#b)"/>
+  </g>
+</svg>
