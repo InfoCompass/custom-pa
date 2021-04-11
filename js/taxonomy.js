@@ -3,95 +3,85 @@
 
 	exports.categories = [
 		{
-			name:	'labour',				//Arbeit und Beschäftigung
-			colors:	['#438eba'],
-			tags: 	[]
-		},
-		{
-			name:	'sports',				//Bewegung und Sport
-			colors:	['#999'],
+			name:	'health',				//Gesundheit
+			colors:	['#832A67'],
 			tags:	[]
 		},
 		{
 			name:	'counseling',			//Beratung
-			colors:	['#FA9A20'],
-			tags: 	[]
+			colors:	['#60409D'],
+			tags: 	[
+						'financial_counseling',	//Schuldner- und Sozialberatung
+						'legal_counseling',		//Rechtliche Beratung
+						'offender_services',	//Straffälligenhilfe
+					]
+		},
+		{
+			name:	'sports',				//Bewegung und Sport
+			colors:	['#31AAE2'],
+			tags:	[]
 		},
 		{
 			name:	'education',			//Bildung und Sprache
-			colors:	['#65B2B7'],
+			colors:	['#9f67e8'],
 			tags:	[],
 		},
 		{
 			name:	'volunteer_work',		//Freiwilliges Engagement
-			colors:	['#66B2FF'],
-			tags: 	[]
-		},
-		{
-			name:	'recreation',			//Freizeit
-			colors:	['#999'],
-			tags:	[]
-		},
-		{
-			name:	'health',				//Gesundheit
-			colors:	['#BC8BD8'],
-			tags:	[]
-		},
-		{
-			name:	'hospice',				//Hospiz
-			colors:	['#D69255'],
-			tags: 	[]
-		},
-		{
-			name:	'arts',					//Kreativität und Kunst
-			colors:	['#999'],
-			tags: 	[]
-		},
-		{
-			name:	'victim_support',		//Opferhilfe
-			colors:	['#999'],
-			tags: 	[]
-		},
-		{
-			name:	'care',					//Pflege
-			colors:	['#53C294'],
-			tags: 	[]
-		},
-		{
-			name:	'self_help',			//Selbsthilfe
-			colors:	['#E25C56'],
-			tags: 	[]
-		},
-		{
-			name:	'neighborhood',			//Stadtteilarbeit und Nachbarschaft
-			colors:	['#999'],
-			tags: 	[]
-		},
-		{
-			name:	'financial_counseling',	//Schuldner- und Sozialberatung
-			colors:	['#999'],
+			colors:	['#ff9900'],
 			tags: 	[]
 		},
 		{
 			name:	'addiction',			//Sucht
-			colors:	['#999'],
+			colors:	['#46b4b9'],
 			tags: 	[]
 		},
 		{
-			name:	'offender_services',	//Straffälligenhilfe
-			colors:	['#999'],
+			name:	'labour',				//Arbeit und Beschäftigung
+			colors:	['#ffc300'],
+			tags: 	[]
+		},
+		{
+			name:	'neighborhood',			//Stadtteilarbeit und Nachbarschaft
+			colors:	['#f36600'],
+			tags: 	[]
+		},
+		{
+			name:	'arts',					//Kreativität und Kunst
+			colors:	['#ec465a'],
+			tags: 	[]
+		},
+		{
+			name:	'victim_support',		//Opferhilfe
+			colors:	['#00b33a'],
+			tags: 	[]
+		},
+		{
+			name:	'care',					//Pflege
+			colors:	['#00b0c6'],
+			tags: 	[]
+		},
+		{
+			name:	'self_help',			//Selbsthilfe
+			colors:	['#fb6ac2'],
 			tags: 	[]
 		},
 		{
 			name:	'housing',				//Wohnen
-			colors:	['#999'],
+			colors:	['#d6a800'],
 			tags: 	[]
 		},
 		{
-			name:	'legal_counseling',		//Rechtliche Beratung
-			colors:	['#9FC060'],
+			name:	'recreation',			//Freizeit
+			colors:	['#0eb2ff'],
+			tags:	[]
+		},
+
+		{
+			name:	'hospice',				//Hospiz
+			colors:	['#008671'],
 			tags: 	[]
-		},		
+		},
 
 	]
 
