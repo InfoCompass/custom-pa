@@ -10,7 +10,7 @@ ic-logo-text {
 	display:						inline-block;
 	height:							1em;
 	position:						relative;
-	font-family:					myriad-pro;
+	font-family:					myriad-pro, Roboto, sans-serif;
 }
 
 ic-logo-full 	:first-child,
@@ -54,7 +54,7 @@ ic-logo-line {
 }
 
 ic-logo-line > * {
-	font-size:						0.33em;
+	font-size:						0.433em;
 	margin-right:					0.25em;
 }
 

@@ -16,7 +16,12 @@
                                 "maxBounds":            [[52.8,13.8],[52.2,13]],
                                 "maxClusterRadius":     60,
 
-				"tiles":		"https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicmhvdGVwIiwiYSI6ImNqMGRib2dmYTAwMGEzMnBkNDBuZ2dqMHMifQ.LNUbADugC76iQ91I73xFwg"
+				"tiles":		"https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicmhvdGVwIiwiYSI6ImNqMGRib2dmYTAwMGEzMnBkNDBuZ2dqMHMifQ.LNUbADugC76iQ91I73xFwg",
+                                "consent":              {
+                                                                "server":       "mapbox.com, USA",
+                                                                "default":      true
+                                                        }
+
 		},
 		"sharing": {
 				"twitter": {
@@ -25,6 +30,16 @@
 				"facebook": true,
 				"whatsapp": true,
 				"email": true
-		}
+		},                
+                "webfonts": [
+                        {
+                                "fontFamily":   "myriad-pro",
+                                "url":          "https://use.typekit.net/ylt7opr.css",
+                                "consent":      {
+                                                        "server":       "typekit.net, USA",
+                                                        "default":      true
+                                                }
+                        }
+                ]
 }
 
