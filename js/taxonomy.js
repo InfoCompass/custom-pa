@@ -116,77 +116,77 @@
 			'reinickendorf'
 		],
 
-		// languages: [
-		// 	'albanian',
-		// 	'amharic',
-		// 	'aramaic',
-		// 	'arabic',
-		// 	'armenian',
-		// 	'azerbaijani',
-		// 	'bengali',
-		// 	'bulgarian',
-		// 	'chechen',
-		// 	'chinese',
-		// 	'creole',
-		// 	'dari',
-		// 	'dutch',
-		// 	'english',
-		// 	'farsi',
-		// 	'french',
-		// 	'greek',
-		// 	'hebrew',
-		// 	'hindu',
-		// 	'hungarian',
-		// 	'italian',
-		// 	'japanese',
-		// 	'kikuyu',
-		// 	'korean',
-		// 	'kurdish',
-		// 	'laz',
-		// 	'lithuanian',
-		// 	'luo',
-		// 	'macedonian',
-		// 	'montenegrin',
-		// 	'nepali',
-		// 	'oromo',
-		// 	'pashto',
-		// 	'polish',
-		// 	'portuguese',
-		// 	'punjabi',
-		// 	'romani',
-		// 	'romanian',
-		// 	'russian',
-		// 	'slovene',
-		// 	'serbian_croatian',
-		// 	'spanish',
-		// 	'suomi',
-		// 	'swahili',
-		// 	'tajiki',
-		// 	'thai',
-		// 	'tigrinya',
-		// 	'turkish',
-		// 	'turkmen',
-		// 	'ukranian',
-		// 	'urdu',
-		// 	'uzbek',
-		// 	'vietnamese',
-		// 	'wolof',
-		// ],
+		languages: [
+			'albanian',
+			'amharic',
+			'aramaic',
+			'arabic',
+			'armenian',
+			'azerbaijani',
+			'bengali',
+			'bulgarian',
+			'chechen',
+			'chinese',
+			'creole',
+			'dari',
+			'dutch',
+			'english',
+			'farsi',
+			'french',
+			'greek',
+			'hebrew',
+			'hindu',
+			'hungarian',
+			'italian',
+			'japanese',
+			'kikuyu',
+			'korean',
+			'kurdish',
+			'laz',
+			'lithuanian',
+			'luo',
+			'macedonian',
+			'montenegrin',
+			'nepali',
+			'oromo',
+			'pashto',
+			'polish',
+			'portuguese',
+			'punjabi',
+			'romani',
+			'romanian',
+			'russian',
+			'slovene',
+			'serbian_croatian',
+			'spanish',
+			'suomi',
+			'swahili',
+			'tajiki',
+			'thai',
+			'tigrinya',
+			'turkish',
+			'turkmen',
+			'ukranian',
+			'urdu',
+			'uzbek',
+			'vietnamese',
+			'wolof',
+		],
 
-		accessibility:[				//zugänglich für ...
-			'wheelchair',			//Rollstuhlgerecht
-			'bathroom_accessible',	//Behindertengerechtes WC
-			'physical_disability',	//körperliche Behinderung
-			'mental_disability',	//Lernbehinderung / geistige Behinderung (??)
-			'mental_disability_2',	//psychische (seelische) Behinderung
-			'sight_impaired',		//Blindheit und Sehbeeinträchtigung
-			'hearing_impaired',		//Gehörlosigkeit und Schwerhörigkeit
-			'deafblind',			//Taubblindheit
-			'speech_impairment'		//Sprachbehinderung
+		accessibility:[				
+			'wheelchair',				//Rollstuhlgerecht
+			'bathroom_accessible',		//Behindertengerechtes WC
+			'physical_disability',		//körperliche Behinderung
+			'mental_disability',		//Lernbehinderung / geistige Behinderung (??)
+			'mental_disability_2',		//psychische (seelische) Behinderung
+			'sight_impaired',			//Blindheit und Sehbeeinträchtigung
+			'hearing_impaired',			//Gehörlosigkeit und Schwerhörigkeit
+			'deafblind',				//Taubblindheit
+			'speech_impairment'			//Sprachbehinderung
 		],
 
 
-		misc: [
+		institution_type: [
 			'counseling_center',		//Beratungsstelle
 			'educational_center',		//Bildungszentrum
 			'youth_facility',			//Jugendeinrichtung
@@ -197,7 +197,11 @@
 			'emergency_shelter',		//Notunterkunft
 			'self_help_contact_point',	//Selbsthilfe-Kontaktstelle
 			'senior_citizen_meeting',	//Seniorenbegegnungsstätte
-			'district_center'			//Stadtteilzentrum
+			'district_center',			//Stadtteilzentrum
+			'meeting_center',			//Begegnungszentrum
+			'assisted_living',			//Betreutes Wohnen
+			'retirement_home',			//Seniorenheim
+			'nursing_home'				//Pflegeheim
 		]
 
 

@@ -28,7 +28,7 @@
 					ng-repeat 	= "tag in category.tags"
 					href  		= "/list/c/{{tag}}"
 					class		= "ic-tag ic-bg-cat-{{category.name}} col-2 hover"
-					ng-if		= "ic.itemStorage.currentStats.subMatches[tag]"
+					ng-if		= "true || ic.itemStorage.currentStats.subMatches[tag]"
 				>
 					<span>
 						{{'CATEGORIES.%s' | fill : tag | translate}} 

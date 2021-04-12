@@ -1,0 +1,15 @@
+ic-footer .image {
+	height:					6rem;
+	width:					20rem;
+	max-width:				95%;
+	background-size:		contain;
+	background-position: 	50% 50%;
+	background-repeat:		no-repeat;
+	margin:					2rem auto;
+}
+
+
+
+ic-page [ng-bind-html] {
+	padding-bottom:			6rem;
+}
