@@ -9,6 +9,11 @@ ic-footer .image {
 }
 
 
+ic-header .logo {
+	justify-content:		flex-start;
+	margin-left:			1rem;
+}
+
 
 ic-page [ng-bind-html] {
 	padding-bottom:			6rem;
