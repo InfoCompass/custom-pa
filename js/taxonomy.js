@@ -43,7 +43,7 @@
 		},
 		{
 			name:	'neighborhood',			//Stadtteilarbeit und Nachbarschaft
-			colors:	['#f36600'],
+			colors:	['#729052'],
 			tags: 	[]
 		},
 		{
@@ -68,7 +68,7 @@
 		},
 		{
 			name:	'housing',				//Wohnen
-			colors:	['#d6a800'],
+			colors:	['#E36E00'],
 			tags: 	[]
 		},
 		{

@@ -39,12 +39,12 @@ ic-logo-full 	> * {
 
 ic-logo-print	:first-child,
 ic-logo-full 	:first-child {
-	font-size:						0.6em;
+	font-size:						0.62em;
 }
 
 ic-logo-print	:last-child,
 ic-logo-full 	:last-child {
-	font-size:						0.4em;
+	font-size:						0.38em;
 }
 
 ic-logo-line {
