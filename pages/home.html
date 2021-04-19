@@ -1,0 +1,35 @@
+<header 
+	class 		= "image-home"
+>
+	<h2> <span class = "bg-0" ng-bind-html = "('INTERFACE.CLAIM' | translate)"></span></h2>
+	<ic-carousel
+		ic-images  		= "['image-home','image-home', 'image-home', 'image-home']"
+		ic-auto-turn	= "30000"
+	>
+	</ic-carousel>
+</header>	
+
+<article class = "search">
+	<ic-search 
+		ic-button-label = "ic.layout.mode.name != 'XS' ? ('INTERFACE.SEARCH' | translate) : true"
+	>
+	</ic-search>
+	<div class = "types">
+		<a 
+			ng-repeat 	= "type in ic.taxonomy.types"
+			ng-href		= "/list/t/{{type.name}}"
+			class 		= "icon left normal icon-type-{{type.name}} active"
+			ic-touch-me
+		>
+			{{'TYPES.%s' | fill : type.name | translate}}
+		</a>
+	</div>
+</article>
+
+<article ng-bind-html  = "('CONTENT.HOME' | translate | markdown)">
+</article>
+
+<section>
+	<ic-tiles class = "tiles">
+	</ic-tiles>
+</section>

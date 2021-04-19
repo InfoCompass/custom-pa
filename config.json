@@ -7,7 +7,7 @@
                 "languages":            ["de", "none"],
                 "activeIconColor":      "#084c8e",
                 "plainIconColor":       "#666666",
-                "pages":                ["home", "tags", "about", "corona", "news", "legal", "contact", "tiles", "emergency", "manual"],
+                "pages":                ["home", "tags", "about", "legal", "contact", "tiles", "manual"],
                 "map":{
                                 "center":               [52.518611,13.408333],
                                 "zoom":                 10,

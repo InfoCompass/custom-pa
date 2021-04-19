@@ -202,7 +202,18 @@
 			'assisted_living',			//Betreutes Wohnen
 			'retirement_home',			//Seniorenheim
 			'nursing_home'				//Pflegeheim
-		]
+		],
+
+		// service_times: [
+		// 	'morning',					//Vormittags
+		// 	'afternoon',				//Nachmittags
+		// 	'evening',					//Abends
+		// 	'weekend',					//Wochenende
+		// 	'daily',					//Täglich
+		// 	'weekly',					//Wöchentlich
+		// 	'monthly',					//Monatlich
+		// 	'by_arrangement'			//Nach Absprache
+		// ]
 
 
 		// sponsors:[
