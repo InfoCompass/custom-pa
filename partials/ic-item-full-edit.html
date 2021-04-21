@@ -99,7 +99,7 @@
 
 
 	<!-- image -->
-	<article>
+	<article ng-if ="ic.user.can('edit_items')">
 		<div> <!-- spacer --> </div>
 		<div>
 			<h4> {{'ITEMS.IMAGE' | translate}}</h4>
@@ -362,6 +362,41 @@
 			></ic-item-property-edit>
 		</div>
 	</article>
+
+
+	<div><div> <!-- spacer --> </div><hr class  = "bg-2"/></div>
+
+	<article
+		ng-if = "ic.user.can('edit_items')"
+	>
+		<div> <!-- spacer --> </div>
+		<div class = "flex flex-space flex-wrap">
+			<div class = "flex-grow">
+				<h4> {{'ITEMS.PROJECT_START_DATE' | translate}}</h4>
+
+				<ic-item-property-edit
+					ic-item						= "icItem"
+					ic-type						= "string"				
+					ic-key						= "projectStartDate"
+					ic-date						= "true"
+					ic-skip-time				= "true"
+				></ic-item-property-edit>
+			</div>
+		
+			<div class = "flex-grow">
+				<h4> {{'ITEMS.PROJECT_END_DATE' | translate}}</h4>
+
+				<ic-item-property-edit
+					ic-item						= "icItem"
+					ic-type						= "string"				
+					ic-key						= "projectEndDate"
+					ic-date						= "true"
+					ic-skip-time				= "true"
+				></ic-item-property-edit>
+			</div>
+		</div>
+	</article>
+
 
 
 	<div><div> <!-- spacer --> </div><hr class  = "bg-2"/></div>

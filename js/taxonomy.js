@@ -204,6 +204,13 @@
 			'nursing_home'				//Pflegeheim
 		],
 
+		service_type: [
+			'group', 					//Gruppenangebot
+			'in_person', 				//Persönlich
+			'online',					//Online
+			'by_phone'					//Telefonisch
+		]
+
 		// service_times: [
 		// 	'morning',					//Vormittags
 		// 	'afternoon',				//Nachmittags

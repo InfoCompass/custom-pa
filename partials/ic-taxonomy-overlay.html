@@ -23,8 +23,8 @@
 >
 	<li
 		ng-if		= "true"
-		class 		= "icon icon-interface-all"
-		ng-class	= "{'bg-3 white':ic.filterConfig.categoryCleared()}"
+		class 		= "icon icon-interface-radio"
+		ng-class	= "{'bg-3 white checked':ic.filterConfig.categoryCleared()}"
 		ng-click	= "ic.filterConfig.clearCategory()" 
 		ic-touch-me	= "true"
 	>
@@ -65,12 +65,12 @@
 
 <ul 
 		class 		= "bg-0"
-		ng-if		= "icExpand == key && ['districts', 'sponsors'].indexOf(key) == -1"
+		ng-if		= "icExpand == key && ['districts'].indexOf(key) == -1"
 		ng-repeat	= "(key, tagGroup) in ic.taxonomy.tags"
 	>
 	<li
-		class 		= "icon icon-interface-all"
-		ng-class	= "{'bg-3 white':ic.filterConfig.unsortedTagCleared(tagGroup)}"
+		class 		= "icon icon-interface-radio bg-0"
+		ng-class	= "{'bg-3 white checked':ic.filterConfig.unsortedTagCleared(tagGroup)}"
 		ng-click	= "ic.filterConfig.clearUnsortedTag(tagGroup)" 
 		ic-touch-me	= "true"
 	>
@@ -110,7 +110,7 @@
 	>
 	<li
 		class 		= "icon icon-interface-radio"
-		ng-class	= "{'checked':ic.filterConfig.unsortedTagCleared(ic.taxonomy.tags.districts)}"
+		ng-class	= "{'bg-3 white checked':ic.filterConfig.unsortedTagCleared(ic.taxonomy.tags.districts)}"
 		ng-click	= "ic.filterConfig.clearUnsortedTag(ic.taxonomy.tags.districts)" 
 		ic-touch-me	= "true"
 	>
