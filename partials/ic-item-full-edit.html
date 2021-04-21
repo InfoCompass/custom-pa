@@ -36,6 +36,7 @@
 		<!-- EDIT -->
 		<h3 ng-if = "!icItem.internal.new && !ic.user.can('edit_items')">{{'INTERFACE.SUGGEST_ITEM_EDIT'| translate}}</h3>
 
+
 		<!-- NEW -->
 		<h3 ng-if = "icItem.internal.new && ic.user.can('edit_items')">{{'INTERFACE.CREATE_NEW_ITEM'| translate}}</h3>
 
@@ -46,6 +47,19 @@
 
 
 	<div><div> <!-- spacer --> </div><hr class  = "bg-2"/></div>
+
+	<article>
+		<div> <!-- spacer --> </div>
+		<div 
+			ng-if = "!icItem.internal.new && !ic.user.can('edit_items')"
+			ng-bind-html ="'INTERFACE.SUGGEST_ITEM_EDIT_NOTE' | translate | markdown">
+		</div>
+
+		<div 
+			ng-if = "icItem.internal.new && !ic.user.can('edit_items')" 
+			ng-bind-html ="'INTERFACE.SUGGEST_NEW_ITEM_NOTE' | translate | markdown">
+		</div>
+	</article>
 
 
 	<!-- title -->
@@ -264,6 +278,7 @@
 					></ic-item-property-edit>
 				</div>
 				<button
+					class	 = "border-3 padding"
 					ng-click = "pickCoordinates()"
 				>
 					{{'INTERFACE.PICK_COORDINATES' | translate}}
@@ -271,6 +286,9 @@
 			</div>
 		</div>
 	</article>
+
+	
+	<div><div> <!-- spacer --> </div><hr class  = "bg-2"/></div>
 
 	
 	<!-- responsible -->
@@ -317,7 +335,10 @@
 
 	<!-- tags/unsorted -->
 
-	<article ng-repeat = "key in ['target_groups', 'districts', 'institution_type', 'accessibility', 'languages']">
+	<article 
+		ng-repeat 	= "(key,value) in ic.taxonomy.tags"
+		ng-if		= " (key != 'lists'  || !ic.config.disableLists) && key !='extra'"
+	>
 		<div> <!-- spacer --> </div>
 		<div>
 			<h4> {{'ITEMS.%s' | fill : key | translate}}</h4>
@@ -399,13 +420,9 @@
 
 
 
-	<div><div> <!-- spacer --> </div><hr class  = "bg-2"/></div>
+	<div ng-if = "ic.user.can('edit_items')"><div> <!-- spacer --> </div><hr class  = "bg-2"/></div>
 
-
-
-	<article
-		ng-if = "ic.user.can('edit_items')"
-	>
+	<article ng-if = "ic.user.can('edit_items')" >
 		<div> <!-- spacer --> </div>
 		<div>
 			<h4> {{'ITEMS.RESUBMISSION_DATE' | translate}}</h4>
@@ -420,11 +437,9 @@
 		</div>
 	</article>
 
-	<div><div> <!-- spacer --> </div><hr class  = "bg-2"/></div>
+	<div ng-if = "ic.user.can('edit_items')"><div> <!-- spacer --> </div><hr class  = "bg-2"/></div>
 
-	<article
-		ng-if = "ic.user.can('edit_items')"
-	>
+	<article ng-if = "ic.user.can('edit_items')" >
 		<div> <!-- spacer --> </div>
 		<div>
 			<h4> {{'ITEMS.STATE' | translate}}</h4>
