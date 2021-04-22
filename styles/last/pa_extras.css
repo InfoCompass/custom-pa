@@ -15,16 +15,6 @@ ic-header .logo {
 }
 
 
-ic-page [ng-bind-html] {
-	padding-bottom:			6rem;
-}
-
-
-
-
-
-
-
 /* filter overlays: */
 
 
