@@ -278,7 +278,7 @@
 					></ic-item-property-edit>
 				</div>
 				<button
-					class	 = "border-3 padding"
+					class	 = "border-3 padding full"
 					ng-click = "pickCoordinates()"
 				>
 					{{'INTERFACE.PICK_COORDINATES' | translate}}
@@ -387,9 +387,7 @@
 
 	<div><div> <!-- spacer --> </div><hr class  = "bg-2"/></div>
 
-	<article
-		ng-if = "ic.user.can('edit_items')"
-	>
+	<article>
 		<div> <!-- spacer --> </div>
 		<div class = "flex flex-space flex-wrap">
 			<div class = "flex-grow">
