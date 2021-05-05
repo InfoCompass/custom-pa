@@ -1,6 +1,5 @@
 {
-                "xbackendLocation":      "https://api.paritaet.place-making.org",
-                "backendLocation":      "http://localhost:2411",
+                "backendLocation":      "https://api.paritaet.place-making.org",
                 "frontendLocation":     "https://paritaet.place-making.org",
                 "statsLocation":        "https://stats.paritaet.place-making.org",
                 "title":                "social map",
