@@ -20,10 +20,10 @@ ic-logo-line 	:first-child {
 	font-weight:					bold;
 }
  
-ic-logo-full 	:last-child,
-ic-logo-text 	:last-child,
-ic-logo-print	:last-child,
-ic-logo-line 	:last-child {
+ic-logo-full 	:nth-child(2)
+ic-logo-text 	:nth-child(2)
+ic-logo-print	:nth-child(2)
+ic-logo-line 	:nth-child(2){
 	font-weight:					normal;
 }
 
@@ -42,8 +42,8 @@ ic-logo-full 	:first-child {
 	font-size:						0.62em;
 }
 
-ic-logo-print	:last-child,
-ic-logo-full 	:last-child {
+ic-logo-print	:nth-child(2),
+ic-logo-full 	:nth-child(2) {
 	font-size:						0.38em;
 }
 
