@@ -30,7 +30,8 @@
 				"facebook": true,
 				"whatsapp": true,
 				"email": true
-		},                
+		},
+                "publicItems": "https://public.info-compass.net/items",                
                 "webfonts": [
                         {
                                 "fontFamily":   "myriad-pro",
