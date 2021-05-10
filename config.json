@@ -31,7 +31,7 @@
 				"whatsapp": true,
 				"email": true
 		},
-                "publicItems": "https://public.info-compass.net/items",                
+                "publicItems": "https://public.paritaet.place-making.org/items",                
                 "webfonts": [
                         {
                                 "fontFamily":   "myriad-pro",
