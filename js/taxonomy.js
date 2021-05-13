@@ -83,6 +83,12 @@
 			tags: 	[]
 		},
 
+		{
+			name:	'kindergarden',			//Kinderbetreuung
+			colors:	['#3c5198'],
+			tags:	[]
+		}
+
 	]
 
 	exports.types = []
@@ -134,6 +140,7 @@
 			'farsi',
 			'french',
 			'greek',
+			'german_sign_langauge',
 			'hebrew',
 			'hindu',
 			'hungarian',
@@ -189,8 +196,7 @@
 		institution_type: [
 			'counseling_center',		//Beratungsstelle
 			'educational_center',		//Bildungszentrum
-			'youth_facility',			//Jugendeinrichtung
-			'kindergarden',				//Kindergarten
+			'youth_facility',			//Jugendeinrichtung			
 			'cultural_center',			//Kulturzentrum
 			'multigenerational_house',	//Mehrgenerationenhaus
 			'neighborhood_house',		//Nachbarschaftshaus
@@ -201,7 +207,8 @@
 			'meeting_center',			//Begegnungszentrum
 			'assisted_living',			//Betreutes Wohnen
 			'retirement_home',			//Seniorenheim
-			'nursing_home'				//Pflegeheim
+			'nursing_home',				//Pflegeheim
+			'interpreting_service'		//Dolmetscherdienst
 		],
 
 		service_type: [

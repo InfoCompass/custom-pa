@@ -22,7 +22,7 @@
 			<div>{{'INTERFACE.FILTER_ANY' | translate}}</div>
 		</li>
 		<li
-			ng-repeat 	= "category in ic.taxonomy.categories"
+			ng-repeat 	= "category in ic.taxonomy.categories | orderBy : ic.utils.evalItems('item.name.substr(0,4) == \'misc\' ? null : (\'CATEGORIES.%s\' | fill : item.name | translate)')"
 			ng-if		= "true"
 			class		= "icon icon-category-{{::category.name}} bg-0"
 			ic-button	= "{active:ic.filterConfig.categoryActive(category.name), disabled: !ic.itemStorage.currentStats.altMatches[category.name]}"
