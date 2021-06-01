@@ -68,11 +68,13 @@ ic-logo-text > * {
 /* ic-logo-print */
 
 ic-logo-print {
+	position:						relative;
 	display:						inline-block;
 	height:							1em;
-	position:						relative;
+	width:							4em;
+	background-image:				url('/images/large/logo-print.svg');
+	background-size:				contain;
+	background-repeat: 				no-repeat;
+	background-position:			0% 50%;
 }
 
-ic-logo-print img {
-	height:							1em;
-}

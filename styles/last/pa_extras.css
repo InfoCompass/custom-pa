@@ -15,6 +15,69 @@ ic-header .logo {
 }
 
 
+
+
+/* home page */
+
+
+ic-page header .call-to-action {
+	position:					absolute;
+	flex-direction: 			column;
+	justify-content: 			space-around;
+	display:					flex;
+	box-sizing: 				border-box;
+	z-index:					9999;
+	bottom:						4rem;
+	right:						0;
+	height:						auto;
+    width: 						31rem;
+    max-width:					100%;	
+	padding-top:				1.5rem;
+	padding-left:				2rem;
+	padding-right:				2rem;
+	padding-bottom:				1rem;
+}
+
+ic-page header .call-to-action:before {
+	content:					'';
+	position:					absolute;
+	display:					block;
+	top:						0;
+	bottom:						0;
+	left:						0;
+	right:						0;
+	opacity:					0.8;
+	background-color:			var(--primary-color);
+	z-index:					-1;
+}
+
+ic-page header .call-to-action > * {
+	position:					relative;
+	flex:						0 0 auto;
+	display:					block;
+	margin:						0;
+	padding:					0;
+	text-indent: 				0;
+	text-align:					left;
+}
+
+ic-page header .call-to-action > h2 {
+	font-size:					1.5rem;
+	color:						var(--light-text-color);
+	line-height:				2rem;
+
+}
+
+ic-page header .call-to-action > h3 {
+	font-size:					1rem;
+	color:						var(--light-text-color);	
+	font-weight:				400;
+	line-height:				1.5rem;
+
+}
+
+
+
 /* filter overlays: */
 
 

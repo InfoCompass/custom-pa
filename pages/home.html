@@ -1,12 +1,16 @@
-<header 
-	class 		= "image-home"
->
+<header>
 	<!-- <h2> <span class = "bg-0" ng-bind-html = "('INTERFACE.CLAIM' | translate)"></span></h2> -->
 	<ic-carousel
 		ic-images  		= "['image-SMB_01','image-SMB_02', 'image-SMB_03', 'image-SMB_04']"
 		ic-auto-turn	= "20000"
 	>
 	</ic-carousel>
+
+	<hgroup class ="call-to-action">
+		<h3>{{'INTERFACE.CALL_TO_ACTION_SECONDARY'	| translate}}</h3>
+		<h2>{{'INTERFACE.CALL_TO_ACTION_PRIMARY'	| translate}}</h2>
+	</hgroup>
+
 </header>	
 
 <article class = "search">	
