@@ -46,7 +46,7 @@ ic-page header .call-to-action:before {
 	bottom:						0;
 	left:						0;
 	right:						0;
-	opacity:					0.8;
+	opacity:					0.9;
 	background-color:			var(--primary-color);
 	z-index:					-1;
 }
