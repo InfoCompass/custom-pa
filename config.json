@@ -8,7 +8,7 @@
                 "languages":            ["de", "none"],
                 "activeIconColor":      "#084c8e",
                 "plainIconColor":       "#666666",
-                "pages":                ["home", "tags", "about", "contact", "tiles", "manual", "legal"],
+                "pages":                ["home", "tags", "about", "contact", "tiles", "manual", "legal", "options"],
                 "map":{
                                 "center":               [52.518611,13.408333],
                                 "zoom":                 10,
