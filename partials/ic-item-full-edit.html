@@ -306,17 +306,25 @@
 	<div><div> <!-- spacer --> </div><hr class  = "bg-2"/></div>
 
 	
-	<!-- responsible -->
+	<!-- responsible institution (options)-->
 
 	<article>
 		<div> <!-- spacer --> </div>
 		<div>
-			<h4> {{'ITEMS.RESPONSIBLE' | translate}}</h4>
+			<h4> {{'ITEMS.RESPONSIBLE_INSTITUTION' | translate}}</h4>
+
 
 			<ic-item-property-edit
-				ic-item					= "icItem"
-				ic-type 				= "string"
-				ic-key					= "responsible"
+				class						= "long-labels"
+				ic-item						= "icItem"
+				ic-type 					= "array"
+				ic-translation-key			= "responsible_institution"
+				ic-options					= "ic.taxonomy.tags.options_ri"							
+				ic-options-filter-limit		= "5"
+				ic-option-label				= "ic.options.getLabel(option)"	
+				ic-option-filter-key		= "ic.options.getLabel(option)"
+				ic-allow-multiple-choices	= "true"
+				ic-key						= "tags"
 			></ic-item-property-edit>
 			
 		</div>
@@ -351,8 +359,8 @@
 	<!-- tags/unsorted -->
 
 	<article 
-		ng-repeat 	= "(key,value) in ic.taxonomy.tags"
-		ng-if		= " (key != 'lists'  || !ic.config.disableLists) && key !='extra'"
+		ng-repeat 	= "key in ['target_groups', 'districts', 'languages', 'accessibility',  'institution_type', 'service_type']"
+		ng-if		= " !['option_ri', 'extra'].includes(key) && (key != 'lists' || !ic.config.disableLists)"
 	>
 		<div> <!-- spacer --> </div>
 		<div>
