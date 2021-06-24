@@ -253,8 +253,8 @@
 
 	<ic-item-property
 		ng-if			= "item.responsible"
-		ic-title 		= "'ITEMS.RESPONSIBLE' | translate"
-		ic-content		= "item.responsible"
+		ic-title 		= "'ITEMS.RESPONSIBLE_INSTITUTION' | translate"
+		ic-extra-lines	= "item | icUnsortedTags: 'options_ri' | mapExpression : '\'UNSORTED_TAGS.%s\' | fill : x | translate' : this"
 		ic-icon			= "'property-responsible'"		
 	>
 	</ic-item-property>
