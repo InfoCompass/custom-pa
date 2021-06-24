@@ -313,6 +313,13 @@
 		<div>
 			<h4> {{'ITEMS.RESPONSIBLE_INSTITUTION' | translate}}</h4>
 
+			<a 
+				class		= "bg-3 white mini icon icon-interface-cogwheel round"
+				ng-if		= "ic.user.can('edit_options')"
+				ng-href 	= "/p/options"
+			>
+			</a>
+
 
 			<ic-item-property-edit
 				class						= "long-labels"
