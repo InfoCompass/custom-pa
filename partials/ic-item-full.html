@@ -216,7 +216,7 @@
 
 
 	<ic-item-property
-		ng-repeat	= "key in ['facebook', 'twitter', 'instagram', 'whatsapp', 'vimeo', 'telegram']"
+		ng-repeat	= "key in ['facebook', 'twitter', 'instagram', 'youtube', 'vimeo', 'telegram', 'whatsapp']"
 		ng-if		= "item[key]"
 		ic-title 	= "'ITEMS.%s' | fill : key | translate"
 		ic-content	= "item[key]"
@@ -239,6 +239,17 @@
 	</ic-item-property>
 	
 
+	<!-- accessibility -->
+	<ic-item-property
+		ng-repeat		= "tagGroup in ['accessibility']"
+		ic-title 		= "'ITEMS.%s' | fill : tagGroup | translate"
+		ic-extra-lines	= "item | icUnsortedTags : tagGroup | mapExpression : '\'UNSORTED_TAGS.%s\' | fill : x | translate ' : this"
+		ic-icon			= "'property-'+tagGroup"		
+	>
+	</ic-item-property>
+
+
+
 	<!-- project start /end -->
 	<ic-item-property
 		ng-if		= "item.projectStartDate || item.projectEndDate"
@@ -252,9 +263,10 @@
 	<!-- responsible -->
 
 	<ic-item-property
+		class			= "screen-only"
 		ng-if			= "item.responsible"
 		ic-title 		= "'ITEMS.RESPONSIBLE_INSTITUTION' | translate"
-		ic-extra-lines	= "item | icUnsortedTags: 'options_ri' | mapExpression : '\'UNSORTED_TAGS.%s\' | fill : x | translate' : this"
+		ic-extra-links	= "item | icOptions: 'ri' | mapExpression : '[x.label, \'/list/u/\'+x.tag]' : this"
 		ic-icon			= "'property-responsible'"		
 	>
 	</ic-item-property>

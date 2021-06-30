@@ -196,6 +196,7 @@
 		institution_type: [
 			'counseling_center',		//Beratungsstelle
 			'educational_center',		//Bildungszentrum
+			'family_center',			//Familienzentrum
 			'youth_facility',			//Jugendeinrichtung			
 			'cultural_center',			//Kulturzentrum
 			'multigenerational_house',	//Mehrgenerationenhaus
