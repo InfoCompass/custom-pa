@@ -32,8 +32,7 @@
 				"facebook": true,
 				"whatsapp": true,
 				"email": true
-		},
-                "publicItems": "https://public.paritaet.place-making.org/items",                
+		},                
                 "webfonts": [
                         {
                                 "fontFamily":   "myriad-pro",
