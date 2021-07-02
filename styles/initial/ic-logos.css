@@ -3,71 +3,41 @@
 /* ic-text-logo */
 
 
+ic-logo-print, 
 ic-logo-full,
-ic-logo-line,
-ic-logo-print,
-ic-logo-text {
+ic-logo-line {
 	display:						inline-block;
-	min-height:						1em;
-	position:						relative;
-	font-family:					myriad-pro, Roboto, sans-serif;
+	background-size:				contain;
+	background-repeat: 				no-repeat;
+	background-position:			0% 50%;
 }
 
-ic-logo-full 	:first-child,
-ic-logo-text 	:first-child,
-ic-logo-print	:first-child,
-ic-logo-line 	:first-child {
-	font-weight:					bold;
-}
- 
-ic-logo-full 	:nth-child(2)
-ic-logo-text 	:nth-child(2)
-ic-logo-print	:nth-child(2)
-ic-logo-line 	:nth-child(2){
-	font-weight:					normal;
-}
-
-ic-logo-text > *,
-ic-logo-line > * {
-	display:						inline;
-}
-
-ic-logo-print	> *,
-ic-logo-full 	> * {
-	display:						block;
-}
-
-ic-logo-print	:first-child,
-ic-logo-full 	:first-child {
-	font-size:						0.62em;
-}
-
-ic-logo-print	:nth-child(2),
-ic-logo-full 	:nth-child(2) {
-	font-size:						0.38em;
+ic-logo-print, 
+ic-logo-full {
+	background-image:				url('/images/large/logo.svg');
 }
 
 ic-logo-line {
-	display:						inline-flex;
-	flex-direction:					row;
-	align-items:					center;
-	flex-wrap:						wrap;
+	background-image:				url('/images/large/logo-line.svg');
 }
 
-ic-logo-line > * {
-	font-size:						0.433em;
-	margin-right:					0.25em;
-	line-height:					1.1;
+
+ic-logo-print, 
+ic-logo-full {
+	height:							1em;
+	width:							4em;
 }
 
-ic-logo-text > * {
-	font-size:						1em;
+ic-logo-line {
+	height:							1em;
+	width:							7em;
 }
+
 
 
 /* ic-logo-print */
 
-ic-logo-print {
+/*ic-logo-print {
 	position:						relative;
 	display:						inline-block;
 	height:							1em;
@@ -78,3 +48,4 @@ ic-logo-print {
 	background-position:			0% 50%;
 }
 
+*/

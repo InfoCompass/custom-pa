@@ -4,6 +4,7 @@
                 "statsLocation":        "https://stats.paritaet.place-making.org",
                 "publicItems":          "https://public.paritaet.place-making.org/items",
                 "xbackendLocation":     "https://api.socialmap-berlin.de",                
+                
                 "xfrontendLocation":    "https://socialmap-berlin.de",
                 "xstatsLocation":       "https://stats.socialmap-berlin.de",
                 "xpublicItems":         "https://public.socialmap-berlin.de/items",
