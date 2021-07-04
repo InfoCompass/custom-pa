@@ -76,6 +76,10 @@ ic-page header .call-to-action > h3 {
 
 }
 
+.XS ic-page header .call-to-action {
+	display:					none;
+}
+
 
 
 /* filter overlays: */
