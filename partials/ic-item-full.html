@@ -242,6 +242,7 @@
 	<!-- accessibility -->
 	<ic-item-property
 		ng-repeat		= "tagGroup in ['accessibility']"
+		ng-if			= "(item | icUnsortedTags : tagGroup).length"	
 		ic-title 		= "'ITEMS.%s' | fill : tagGroup | translate"
 		ic-extra-lines	= "item | icUnsortedTags : tagGroup | mapExpression : '\'UNSORTED_TAGS.%s\' | fill : x | translate ' : this"
 		ic-icon			= "'property-'+tagGroup"		
