@@ -12,9 +12,13 @@
 			colors:	['#6b4fad'],
 			tags: 	[
 						'financial_counseling',	//Schuldner- und Sozialberatung
-						'legal_counseling',		//Rechtliche Beratung
-						'offender_services',	//Straffälligenhilfe
+						'legal_counseling',		//Rechtliche Beratung						
 					]
+		},
+		{
+			name:	'offender_services',	//Straffälligenhilfe
+			colors:	['#7a88dc'],
+			tags:	[]
 		},
 		{
 			name:	'sports',				//Bewegung und Sport

@@ -265,7 +265,7 @@
 
 	<ic-item-property
 		class			= "screen-only"
-		ng-if			= "item.responsible"
+		ng-if			= "(item | icOptions: 'ri').length"
 		ic-title 		= "'ITEMS.RESPONSIBLE_INSTITUTION' | translate"
 		ic-extra-links	= "item | icOptions: 'ri' | mapExpression : '[x.label, \'/list/u/\'+x.tag]' : this"
 		ic-icon			= "'property-responsible'"		
