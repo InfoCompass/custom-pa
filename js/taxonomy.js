@@ -16,11 +16,6 @@
 					]
 		},
 		{
-			name:	'offender_services',	//Straffälligenhilfe
-			colors:	['#7a88dc'],
-			tags:	[]
-		},
-		{
 			name:	'sports',				//Bewegung und Sport
 			colors:	['#4fa8e0'],
 			tags:	[]
@@ -90,6 +85,12 @@
 		{
 			name:	'kindergarden',			//Kinderbetreuung
 			colors:	['#f5548a'],
+			tags:	[]
+		},
+
+		{
+			name:	'offender_services',	//Straffälligenhilfe
+			colors:	['#7a88dc'],
 			tags:	[]
 		}
 
