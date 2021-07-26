@@ -160,6 +160,7 @@
 			'macedonian',
 			'montenegrin',
 			'nepali',
+			'norwegian',
 			'oromo',
 			'pashto',
 			'polish',
@@ -214,7 +215,8 @@
 			'assisted_living',			//Betreutes Wohnen
 			'retirement_home',			//Seniorenheim
 			'nursing_home',				//Pflegeheim
-			'interpreting_service'		//Dolmetscherdienst
+			'interpreting_service',		//Dolmetscherdienst
+			'contact_point_ce'			//Kontaktstelle PflegeEngagement
 		],
 
 		service_type: [
