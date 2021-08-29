@@ -255,7 +255,7 @@
 	<ic-item-property
 		ng-if		= "item.projectStartDate || item.projectEndDate"
 		ic-title 	= "'ITEMS.PROJECT_DATES' | translate"
-		ic-content	= "(item.startDate | icDate : item.projectStartDate.match('T')) +' – '+ (item.projectEndDate | icDate : !!item.projectStartDate.match('T'))"
+		ic-content	= "(item.projectStartDate | icDate : item.projectStartDate.match('T')) +' – '+ (item.projectEndDate | icDate : !!item.projectStartDate.match('T'))"
 		ic-icon		= "'property-time'"
 	>
 	</ic-item-property>
