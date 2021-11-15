@@ -1,8 +1,5 @@
 {
-                "xbackendLocation":      "https://api-paritaet.place-making.org",                
-                "xfrontendLocation":     "https://paritaet.place-making.org",
-                "xstatsLocation":        "https://stats.paritaet.place-making.org",
-                "xpublicItems":          "https://public.paritaet.place-making.org/items",
+                                           
                 
                 "backendLocation":     "https://api.socialmap-berlin.de",                
                 "frontendLocation":    "https://socialmap-berlin.de",
