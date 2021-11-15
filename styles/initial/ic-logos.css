@@ -12,13 +12,17 @@ ic-logo-line {
 	background-position:			0% 50%;
 }
 
-ic-logo-print, 
+
 ic-logo-full {
 	background-image:				url('/images/large/logo.svg');
 }
 
 ic-logo-line {
 	background-image:				url('/images/large/logo-line.svg');
+}
+
+ic-logo-line {
+	background-image:				url('/images/large/logo-print.svg');
 }
 
 
