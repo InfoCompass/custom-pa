@@ -17,24 +17,25 @@ ic-logo-full {
 	background-image:				url('/images/large/logo.svg');
 }
 
-ic-logo-line {
-	background-image:				url('/images/large/logo-line.svg') !important;
-}
-
-ic-logo-print {
-	background-image:				url('/images/large/logo-print.svg') !important;
-}
-
-
 ic-logo-print, 
+ic-logo-line {
+	background-image:				url('/images/large/logo-line.svg');
+}
+
+
 ic-logo-full {
 	height:							1em;
 	width:							4em;
 }
 
+ic-logo-print, 
 ic-logo-line {
 	height:							1em;
 	width:							7em;
+}
+
+ic-logo-print {
+	filter:						brightness(0);
 }
 
 
