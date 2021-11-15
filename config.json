@@ -13,7 +13,10 @@
                 "activeIconColor":      "#084c8e",
                 "plainIconColor":       "#666666",
                 "pages":                ["home", "tags", "about", "contact", "tiles", "manual", "entries", "acc_lang", "legal"],
-                "adminPages":           ["options"],
+                "adminPages":           [
+                                                "options",
+                                                "icons"
+                                        ],
                 "map":{
                                 "center":               [52.518611,13.408333],
                                 "zoom":                 10,
