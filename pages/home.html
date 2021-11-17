@@ -6,18 +6,20 @@
 	>
 	</ic-carousel>
 
-	<a 
-		class 	= "call-to-action"
-		ng-href = "/list"
-	>
-		<h3>{{'INTERFACE.CALL_TO_ACTION_SECONDARY'	| translate}}</h3>
-		<h2>{{'INTERFACE.CALL_TO_ACTION_PRIMARY'	| translate}}</h2>
-	</a>
+	<div class = "call-to-action">
 
-	<a 
-		class 	=	"image image-einfache_sprache"
-		ng-href	= 	"{{ {page:'acc_lang'} | icLink}}"
-	></a>
+		<a 
+			class 	=	"image image-accessible_language"
+			ng-href =	"/p/acc_lang"	 		
+		></a>
+
+		<a ng-href = "/list">
+			<h3>{{'INTERFACE.CALL_TO_ACTION_SECONDARY'	| translate}}</h3>
+			<h2>{{'INTERFACE.CALL_TO_ACTION_PRIMARY'	| translate}}</h2>
+		</a>
+
+	</div>
+
 
 </header>	
 

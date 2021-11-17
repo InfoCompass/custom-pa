@@ -51,7 +51,7 @@ ic-page header .call-to-action:before {
 	z-index:					-1;
 }
 
-ic-page header .call-to-action > * {
+ic-page header .call-to-action * {
 	position:					relative;
 	flex:						0 0 auto;
 	display:					block;
@@ -61,14 +61,14 @@ ic-page header .call-to-action > * {
 	text-align:					left;
 }
 
-ic-page header .call-to-action > h2 {
+ic-page header .call-to-action h2 {
 	font-size:					1.5rem;
 	color:						var(--light-text-color);
 	line-height:				2rem;
 
 }
 
-ic-page header .call-to-action > h3 {
+ic-page header .call-to-action h3 {
 	font-size:					1rem;
 	color:						var(--light-text-color);	
 	font-weight:				400;
@@ -76,20 +76,21 @@ ic-page header .call-to-action > h3 {
 
 }
 
+ic-page header .call-to-action > .image {
+	position: 					absolute;
+	height: 					8rem;
+	width: 						8rem;
+	right: 						1rem;
+	top: 						-6rem;
+	padding: 					0;
+	z-index: 					99;
+}
+
 .XS ic-page header .call-to-action {
 	display:					none;
 }
 
 
-ic-page header > .image {
-	position: 					absolute;
-	height: 					10rem;
-	width: 						10rem;
-	right: 						1rem;
-	top: 						1rem;
-	padding: 					0;
-	z-index: 					99;
-}
 
 .XS ic-page header > .image {
 	height: 					7rem;
