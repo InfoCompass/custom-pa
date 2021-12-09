@@ -50,6 +50,9 @@
                                                         "default":      true
                                                 }
                         }
-                ]
+                ],
+                "voiceReader": {
+                        "baseUrl":      "https://socialmap-berlin.de"
+                }
 }
 
