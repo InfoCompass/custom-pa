@@ -84,16 +84,6 @@
 	</article>
 
 
-	<article 
-		class = "screen-only"
-		ng-if = "!ic.user.can('edit_items')"
-	>		
-		<div> <!-- spacer --> </div>
-		<div>
-				{{'ITEMS.LAST_CHANGE' | translate}}: {{item.lastEditDate | icDate}}			
-		</div>
-	</article>
-
 	<!-- voice reader -->
 
 	<article class ="voice-reader" ng-if ="ic.config.voiceReader">
@@ -303,6 +293,17 @@
 			</div>
 		</div>
 	</div>
+
+	<article 
+		class = "screen-only"
+		ng-if = "!ic.user.can('edit_items')"
+	>		
+		<div> <!-- spacer --> </div>
+		<div>
+				{{'ITEMS.LAST_CHANGE' | translate}}: {{item.lastEditDate | icDate}}			
+		</div>
+	</article>
+
 
 </section>
 
