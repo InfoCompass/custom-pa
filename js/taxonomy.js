@@ -4,7 +4,7 @@
 	exports.categories = [
 		{
 			name:	'health',				//Gesundheit
-			colors:	['#832A67'],
+			colors:	['#B32A67'],
 			tags:	[]
 		},
 		{
