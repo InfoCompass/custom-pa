@@ -86,13 +86,25 @@
 
 	<!-- voice reader -->
 
-	<article class ="voice-reader" ng-if ="ic.config.voiceReader">
+
+	<article class ="voice-reader" ng-if ="ic.config.voiceReader">		
 		<div> <!-- spacer --> </div>
-		<audio
-			controls
-			src			= "{{ic.config.voiceReader.baseUrl}}/voice-reader/{{item.id}}/audio/de"
-		>
-		</audio>	
+		<div class = "flex flex-space">
+			<audio
+				controls
+				class		= "flex-grow"
+				style		= "{{show_voiceReader || 'pointer-events: none; visibility: hidden'}}"
+				src			= "{{ic.config.voiceReader.baseUrl}}/voice-reader/{{item.id}}/audio/de"
+			>
+			</audio>
+			<button 
+				ng-show		= "!show_voiceReader"
+				class 		= "icon right active icon-interface-voicereader_play"
+				ng-click 	= "show_voiceReader = true"
+			>
+				{{'INTERFACE.SHOW_READER' | translate}} &nbsp;
+			</button>	
+		</div>
 	</article>
 
 
