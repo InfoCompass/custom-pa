@@ -91,19 +91,28 @@
 		<div> <!-- spacer --> </div>
 		<div class = "flex flex-space">
 			<audio
+				id			= "voice-reader"
 				controls
 				class		= "flex-grow"
-				style		= "{{show_voiceReader || 'pointer-events: none; visibility: hidden; width: 1rem'}}"
+				style		= "{{voiceReader.show || 'pointer-events: none; visibility: hidden; width: 1rem'}}"
 				src			= "{{ic.config.voiceReader.baseUrl}}/voice-reader/{{item.id}}/audio/de"
 			>
 			</audio>
 			<button 
-				ng-show		= "!show_voiceReader"
+				ng-show		= "!voiceReader.show"
 				class 		= "icon right active icon-interface-voicereader_play"
-				ng-click 	= "show_voiceReader = true"
+				ng-click 	= "voiceReader.show = true"
 			>
 				{{'INTERFACE.SHOW_READER' | translate}} &nbsp;
-			</button>	
+			</button>
+
+			<button 
+				ng-show		= "voiceReader.show"
+				class 		= "icon right active icon-interface-voicereader_stop"
+				ng-click 	= "voiceReader.show = false"
+			>
+				{{'INTERFACE.HIDE_READER' | translate}} &nbsp;
+			</button>		
 		</div>
 	</article>
 
