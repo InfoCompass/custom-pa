@@ -6,10 +6,11 @@
 	></div> 
 </header>
 
-<section class = "bg-0 padding">
-
-
-	<div ng-if = "ic.user.can('edit_items')">		
+<section 
+ 	ng-if = "ic.user.can('edit_items')"
+	class = "bg-0 padding"
+>
+	<div>		
 		<div> <!-- spacer --> </div>
 		<div>
 
@@ -19,13 +20,13 @@
 			<div ng-if  ="icItem.lastEditor">
 				{{'ITEMS.LAST_EDITOR' | translate}}  	{{icItem.lastEditor	}}	({{icItem.lastEditDate | icDate}})
 			</div>	
-			<div ng-if = "!icItem.internal.new && ic.user.can('edit_items')">
+			<div ng-if = "!icItem.internal.new">
 				<a class = "active" ng-click ="ic.admin.autoTranslate(icItem)">{{'INTERFACE.AUTO_TRANSLATE'| translate }}</a>
 			</div>
 		</div>
 	</div>
 
-	<article ng-if = "ic.user.can('edit_items') && icItem.proposals && icItem.proposals.length > 0">
+	<article ng-if = "icItem.proposals && icItem.proposals.length > 0">
 
 		<div> <!-- spacer --> </div>
 		<div>
@@ -38,43 +39,144 @@
 
 	</article>
 
+</section>
 
-
+<section class = "bg-0 padding">
 
 	<div>		
 		<div> <!-- spacer --> </div>
 		
 		<!-- EDIT -->
-		<h3 ng-if = "!icItem.internal.new && ic.user.can('edit_items')">{{'INTERFACE.EDIT_ITEM'| translate}}</h3>
+		<h3 ng-if = "!icItem.internal.new && ic.user.can('edit_items')">
+			{{'INTERFACE.EDIT_ITEM'| translate}} ({{icItem.title}})
+		</h3>
 
 
 		<!-- EDIT -->
-		<h3 ng-if = "!icItem.internal.new && !ic.user.can('edit_items')">{{'INTERFACE.SUGGEST_ITEM_EDIT'| translate}}</h3>
+		<h3 ng-if = "!icItem.internal.new && !ic.user.can('edit_items')">
+			{{'INTERFACE.SUGGEST_ITEM_EDIT'| translate}} ({{icItem.title}})
+		</h3>
 
 
 		<!-- NEW -->
-		<h3 ng-if = "icItem.internal.new && ic.user.can('edit_items')">{{'INTERFACE.CREATE_NEW_ITEM'| translate}}</h3>
+		<h3 ng-if = "icItem.internal.new && ic.user.can('edit_items')">
+			{{'INTERFACE.CREATE_NEW_ITEM'| translate}} ({{icItem.title}})
+		</h3>
 
 		<!-- SUGGESTION -->
-		<h3 ng-if = "icItem.internal.new && !ic.user.can('edit_items')">{{'INTERFACE.SUGGEST_NEW_ITEM'| translate}}</h3>
+		<h3 ng-if = "icItem.internal.new && !ic.user.can('edit_items')">
+			{{'INTERFACE.SUGGEST_NEW_ITEM'| translate}}({{icItem.title}})
+		</h3>
 
 	</div>
 
+</section>
 
-	<div><div> <!-- spacer --> </div><hr class  = "bg-2"/></div>
+<section 
+	class = "bg-0 padding"
+ 	ng-if = "ic.user.cannot('edit_items')"
+>
 
 	<article>
 		<div> <!-- spacer --> </div>
 		<div 
-			ng-if = "!icItem.internal.new && !ic.user.can('edit_items')"
+			ng-if = "!icItem.internal.new"
 			ng-bind-html ="'INTERFACE.SUGGEST_ITEM_EDIT_NOTE' | translate | markdown">
 		</div>
 
 		<div 
-			ng-if = "icItem.internal.new && !ic.user.can('edit_items')" 
+			ng-if = "icItem.internal.new" 
 			ng-bind-html ="'INTERFACE.SUGGEST_NEW_ITEM_NOTE' | translate | markdown">
 		</div>
 	</article>
+
+
+	<!-- contact information for suggestions -->
+
+	<article 
+		ng-repeat 	= "key in ['name', 'mail', 'apiKey']"
+	>
+		<div> <!-- spacer --> </div>
+		<div>							
+			<h4 > 
+				{{'ITEMS.SUGGESTION_%s' | fill: key | translate}}
+			</h4>
+
+			<div
+				class 		= "ic-item-property-edit"
+				ng-class	= "{invalid: suggestionMetaErrors[key]}"
+			>
+				<form 
+					ng-submit 	= "ic.keyboard.tabNext()"
+				>
+						
+					<input 
+						class				= "bg-1 col-0"
+						type 				= "text"
+						name				= "{{key}}"
+						autocomplete		= "{'name': name, 'mail: 'email', 'apiKey': 'on'}[key]" 
+						ng-model			= "suggestionMeta[key]"
+						ng-model-options	= "{updateOn: 'default blur', debounce: { 'default': 500, 'blur': 0 }}"
+						ng-change			= "suggestionMetaErrors[key] && validateSuggestionMeta(key)"
+						ng-blur				= "validateSuggestionMeta(key)"
+					/>
+
+					<div class  = "note col-1">{{"ITEMS.SUGGESTION_%s_NOTE" | fill : key | translate }}</div>
+	
+					<div ng-if = "!suggestionMetaErrors[key]" 	class = "error"></div>
+					<div ng-if = "suggestionMetaErrors[key]"	class = "error col-3"> 
+						{{'ITEMS.SUGGESTION_%s_%s' | fill : [key, suggestionMetaErrors[key].code] | translate}} 
+					</div>
+
+				</form>
+			</div>
+
+		</div>
+	</article>
+
+
+	<!-- editing Note, if user cannot edit item, this propery moves to the top of the form-->
+
+	<article >
+		<div> <!-- spacer --> </div>
+		<div>		
+		
+			<h4> {{'ITEMS.EDITING_NOTE' | translate}}</h4>
+
+			<ic-item-property-edit
+				ic-item						= "icItem"
+				ic-type						= "text"
+				ic-key						= "editingNote"
+			></ic-item-property-edit>
+		</div>
+
+	</article>
+
+	<article ng-if = "!icItem.internal.new">
+		<div> <!-- spacer --> </div>
+		<div class = "flex">
+			<button 
+				class 		= "padding flex-grow"
+				ng-class	= "{'bg-3': !show.details, 'bg-1': show.details}"
+				ng-click 	= "show.details = !show.details"
+			>
+				{{ (show.details ? 'INTERFACE.HIDE_ITEM_DETAILS' : 'INTERFACE.EDIT_ITEM_DETAILS') | translate}}
+				<span 
+					class 		= "icon"
+					ng-class	= "{'icon-interface-down white': !show.details, 'icon-interface-close plain': show.details}" 
+				></span>
+			</button>
+		</div>
+	</article>
+
+	<div><div> <!-- spacer --> </div><hr class  = "bg-2"/></div>
+
+</section>
+
+<section 
+	ng-hide = "!icItem.internal.new && ic.user.cannot('edit_items') && !show.details"
+	class = "bg-0 padding"
+>
 
 
 	<!-- title -->
@@ -503,9 +605,9 @@
 	</article>
 
 
+	<!-- editing Note, if user cannot edit item, this propery moves to the top of the form-->
 
-
-	<article>
+	<article ng-if ="ic.user.can('edit_items')">
 		<div> <!-- spacer --> </div>
 		<div>
 			<h4> {{'ITEMS.EDITING_NOTE' | translate}}</h4>
@@ -517,6 +619,11 @@
 			></ic-item-property-edit>
 		</div>
 	</article>
+
+</section>
+
+<section class = "bg-0 padding">
+
 
 
 	<article>
@@ -662,6 +769,7 @@
 
 			<button
 				class 		= "bg-3 col-2 padding"
+				type		= "submit"
 				ng-click 	= "submit()"
 				ic-touch-me
 			>

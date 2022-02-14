@@ -132,7 +132,6 @@
 		<div>
 			<ic-item-badge ic-item = "item"></ic-item-badge>
 		</div>
-
 		<div 
 			class 	= "xhcenter"
 			ng-if	= "ic.layout.mode.name == 'XS'"
@@ -143,7 +142,13 @@
 					ng-if 	= "ic.user.can('edit_items')"
 					class	= "screen-only"
 				>
-					[{{'ITEMS.STATE_%s' | fill: item.state | translate}}]
+					[
+						{{'ITEMS.STATE_%s' | fill: item.state | translate}}
+						<span 
+							ng-if = "item.state == 'suggestion' && item.apiKeyUsed"
+							class = "icon icon-interface-auth"
+						></span>
+					]
 				</span>
 			</h2>
 			<h3 ng-if = "ic.layout.mode.name != 'XS'">
@@ -161,7 +166,15 @@
 			>
 				<h2 class = "title" >
 					{{ item.title }}
-					<span ng-if = "ic.user.can('edit_items')">[{{'ITEMS.STATE_%s' | fill: item.state | translate}}]</span>
+					<span ng-if = "ic.user.can('edit_items')">
+						[
+							{{'ITEMS.STATE_%s' | fill: item.state | translate}}
+							<span 
+								ng-if = "item.state == 'suggestion' && item.apiKeyUsed"
+								class = "icon icon-interface-auth"
+							></span>
+						]
+					</span>
 				</h2>
 			</div>
 			<h3 ng-if	= "ic.layout.mode.name != 'XS'">

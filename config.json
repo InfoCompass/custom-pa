@@ -1,10 +1,11 @@
 {
                                            
                 
-                "backendLocation":     "https://api.socialmap-berlin.de",                
+                "xbackendLocation":     "https://api.socialmap-berlin.de",                
+                "backendLocation":     "http://localhost:2411",                
                 "frontendLocation":    "https://socialmap-berlin.de",
                 "statsLocation":       "https://stats.socialmap-berlin.de",
-                "publicItems":         "https://public.socialmap-berlin.de/items",
+                "xpublicItems":         "https://public.socialmap-berlin.de/items",
 
                 "title":                "social map",
                 "disableLists":         true,
@@ -40,7 +41,12 @@
 				"facebook": true,
 				"whatsapp": true,
 				"email": true
-		},                
+		}, 
+                "suggestions":{
+                        "requireName": "new",
+                        "requireMail": "new",
+                        "requireApiKey": "new"
+                },               
                 "webfonts": [
                         {
                                 "fontFamily":   "myriad-pro",
