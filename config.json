@@ -1,8 +1,7 @@
 {
-                                           
-                
-                "xbackendLocation":     "https://api.socialmap-berlin.de",                
-                "backendLocation":     "http://localhost:2411",                
+                               
+                "backendLocation":     "https://api.socialmap-berlin.de",                
+                "xbackendLocation":     "http://localhost:2411",                
                 "frontendLocation":    "https://socialmap-berlin.de",
                 "statsLocation":       "https://stats.socialmap-berlin.de",
                 "xpublicItems":         "https://public.socialmap-berlin.de/items",
