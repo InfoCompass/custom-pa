@@ -60,12 +60,12 @@
 
 		<!-- NEW -->
 		<h3 ng-if = "icItem.internal.new && ic.user.can('edit_items')">
-			{{'INTERFACE.CREATE_NEW_ITEM'| translate}} ({{icItem.title}})
+			{{'INTERFACE.CREATE_NEW_ITEM'| translate}} 
 		</h3>
 
 		<!-- SUGGESTION -->
 		<h3 ng-if = "icItem.internal.new && !ic.user.can('edit_items')">
-			{{'INTERFACE.SUGGEST_NEW_ITEM'| translate}}({{icItem.title}})
+			{{'INTERFACE.SUGGEST_NEW_ITEM'| translate}}
 		</h3>
 
 	</div>
@@ -99,7 +99,14 @@
 		<div> <!-- spacer --> </div>
 		<div>							
 			<h4 > 
-				{{'ITEMS.SUGGESTION_%s' | fill: key | translate}}
+				{{'ITEMS.SUGGESTION_%s' | fill: key | translate}} 
+				({{ 
+					(
+						require(key)
+						?	"INTERFACE.REQUIRED" 
+						:	"INTERFACE.OPTIONAL"
+					) | translate
+				}})
 			</h4>
 
 			<div
@@ -107,14 +114,16 @@
 				ng-class	= "{invalid: suggestionMetaErrors[key]}"
 			>
 				<form 
-					ng-submit 	= "ic.keyboard.tabNext()"
+					ng-submit 		= "ic.keyboard.tabNext()"
+					auto-complete 	= "on"
 				>
 						
 					<input 
 						class				= "bg-1 col-0"
-						type 				= "text"
-						name				= "{{key}}"
-						autocomplete		= "{'name': name, 'mail: 'email', 'apiKey': 'on'}[key]" 
+						id					= "suggestion-{{key}}"
+						type 				= "{{ {'name': 'text', 'mail': 'email', 'apiKey': 'text'}[key] }}"
+						name				= "{{ {'name': 'name', 'mail': 'email', 'apiKey': 'apiKey'}[key] }}"
+						autocomplete		= "{{ {'name': 'name', 'mail': 'email', 'apiKey': 'on'}[key] }}" 
 						ng-model			= "suggestionMeta[key]"
 						ng-model-options	= "{updateOn: 'default blur', debounce: { 'default': 500, 'blur': 0 }}"
 						ng-change			= "suggestionMetaErrors[key] && validateSuggestionMeta(key)"
@@ -127,6 +136,8 @@
 					<div ng-if = "suggestionMetaErrors[key]"	class = "error col-3"> 
 						{{'ITEMS.SUGGESTION_%s_%s' | fill : [key, suggestionMetaErrors[key].code] | translate}} 
 					</div>
+
+					<button type ="submit" tabindex="-1" hidden></button>
 
 				</form>
 			</div>

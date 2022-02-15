@@ -44,7 +44,7 @@
                 "suggestions":{
                         "requireName": "new",
                         "requireMail": "new",
-                        "requireApiKey": "new"
+                        "requireApiKey": false
                 },               
                 "webfonts": [
                         {
