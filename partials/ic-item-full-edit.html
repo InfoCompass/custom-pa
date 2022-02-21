@@ -114,7 +114,7 @@
 				ng-class	= "{invalid: suggestionMetaErrors[key]}"
 			>
 				<form 
-					ng-submit 		= "ic.keyboard.tabNext()"
+					ng-submit 		= "ic.keyboard.tabNextInput()"
 					auto-complete 	= "on"
 				>
 						
@@ -122,13 +122,32 @@
 						class				= "bg-1 col-0"
 						id					= "suggestion-{{key}}"
 						type 				= "{{ {'name': 'text', 'mail': 'email', 'apiKey': 'text'}[key] }}"
-						name				= "{{ {'name': 'name', 'mail': 'email', 'apiKey': 'apiKey'}[key] }}"
-						autocomplete		= "{{ {'name': 'name', 'mail': 'email', 'apiKey': 'on'}[key] }}" 
 						ng-model			= "suggestionMeta[key]"
 						ng-model-options	= "{updateOn: 'default blur', debounce: { 'default': 500, 'blur': 0 }}"
 						ng-change			= "suggestionMetaErrors[key] && validateSuggestionMeta(key)"
 						ng-blur				= "validateSuggestionMeta(key)"
+						ic-auto-fill		= "'suggestionMeta-'+key"
+						list				= "{{'list-suggestionMeta-'+key}}"
 					/>
+					{{ic.autoFill.currentValues[key]}}
+					<datalist 
+						id		= "{{'list-suggestionMeta-'+key}}"
+						ng-if 	= "ic.autoFill.currentValues['suggestionMeta-'+key]"
+					>
+						<option 
+							ng-repeat 	= "value in ic.autoFill.currentValues['suggestionMeta-'+key]"
+							value		= "{{value}}"
+						></option>
+					</datalist>
+
+					<button
+						type		= "button"
+						class 		= "icon icon-interface-checkbox left"
+						ng-class 	= "{ 'checked': ic.autoFill.confirmation['suggestionMeta-'+key]}"
+						ng-click	= "ic.autoFill.toggleConfirmation('suggestionMeta-'+key)"
+					>
+						{{'INTERFACE.AUTOFILL' | translate}}
+					</button>
 
 					<div class  = "note col-1">{{"ITEMS.SUGGESTION_%s_NOTE" | fill : key | translate }}</div>
 	
@@ -137,7 +156,6 @@
 						{{'ITEMS.SUGGESTION_%s_%s' | fill : [key, suggestionMetaErrors[key].code] | translate}} 
 					</div>
 
-					<button type ="submit" tabindex="-1" hidden></button>
 
 				</form>
 			</div>
