@@ -95,9 +95,10 @@
 		},
 
 		{
-			name:	'ukraine',				//Geflüchtete Menschen aus der Ukraine
-			colors:	['#005BBB'],
-			tags:	[]
+			name:	'refugees',				//Geflüchtete Menschen u.a. aus der Ukraine
+			colors:	['#03D342'],
+			tags:	[],
+			pos:	1
 		}
 
 
