@@ -1,10 +1,10 @@
 {
                                
-                "backendLocation":     "https://api.socialmap-berlin.de",                
-                "xbackendLocation":     "http://localhost:2411",                
+                "xxbackendLocation":   "https://api.socialmap-berlin.de",                
+                "backendLocation":     "http://localhost:2411",                
                 "frontendLocation":    "https://socialmap-berlin.de",
                 "statsLocation":       "https://stats.socialmap-berlin.de",
-                "xpublicItems":         "https://public.socialmap-berlin.de/items",
+                "publicItems":         "https://public.socialmap-berlin.de/items",
 
                 "title":                "social map",
                 "disableLists":         true,
@@ -58,6 +58,12 @@
                 ],
                 "voiceReader": {
                         "baseUrl":      "https://socialmap-berlin.de"
+                },
+
+                "export":{
+                        "properties" :["title", "description", "primaryTopic", "address", "zip", "contact", "email", "phone"],
+                        "tagGroups" :["districts", "target_groups", "options_ri"]
+
                 }
 }
 
