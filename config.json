@@ -8,7 +8,7 @@
                 "title":                "social map",
                 "disableLists":         true,
                 "languages":            ["de"],
-                "adminLanguages":       ["none"],
+                "adminLanguages":       ["en", "none"],
                 "activeIconColor":      "#084c8e",
                 "plainIconColor":       "#666666",
                 "pages":                ["home", "tags", "about", "contact", "tiles", "manual", "entries", "acc_lang", "legal"],
