@@ -41,9 +41,9 @@
 				"email": true
 		}, 
                 "suggestions":{
-                        "requireName": "new",
-                        "requireMail": "new",
-                        "requireApiKey": false
+                        "requireName": "both",
+                        "requireMail": "both",
+                        "requireApiKey": "both"
                 },               
                 "webfonts": [
                         {
@@ -60,9 +60,8 @@
                 },
 
                 "export":{
-                        "properties" :["title", "description", "primaryTopic", "address", "zip", "contact", "email", "phone"],
-                        "tagGroups" :["districts", "target_groups", "options_ri"]
-
+                        "properties": ["title", "description", "primaryTopic", "address", "zip", "contact", "email", "phone"],
+                        "tagGroups": ["districts", "target_groups", "options_ri"]
                 }
 }
 
