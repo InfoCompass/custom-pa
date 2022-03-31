@@ -43,7 +43,7 @@
                 "suggestions":{
                         "requireName": "both",
                         "requireMail": "both",
-                        "requireApiKey": "both"
+                        "requireApiKey": "new"
                 },               
                 "webfonts": [
                         {
