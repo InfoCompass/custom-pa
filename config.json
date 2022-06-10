@@ -11,7 +11,7 @@
                 "adminLanguages":       ["none"],
                 "activeIconColor":      "#084c8e",
                 "plainIconColor":       "#666666",
-                "pages":                ["home", "tags", "about", "contact", "tiles", "manual", "entries", "acc_lang", "legal"],
+                "pages":                ["home", "tags", "about", "contact", "tiles", "manual", "entries", "acc_lang", "legal", "download"],
                 "adminPages":           [
                                                 "options",
                                                 "icons"
