@@ -109,6 +109,7 @@
 	exports.tags = {
 
 		target_groups: [
+			'professionals',			//Fachkräfte
 			'senior_citizens',			//Ältere Menschen
 			'families',					//Familien
 			'women',					//Frauen
@@ -154,6 +155,9 @@
 			'french',
 			'greek',
 			'german_sign_langauge',
+			'georgian',
+			'yoruba',
+			'indonesian',
 			'hebrew',
 			'hindu',
 			'hungarian',
@@ -208,6 +212,9 @@
 
 
 		institution_type: [
+			'daycare_children',			//Kindertagesstätte
+			'workshop_disabilities',	//Werkstatt für Menschen mit Behinderung
+			'daycare',					//Tagesstätte
 			'counseling_center',		//Beratungsstelle
 			'educational_center',		//Bildungszentrum
 			'family_center',			//Familienzentrum
