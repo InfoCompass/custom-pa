@@ -1,67 +1,67 @@
 {
-                               
-                "backendLocation":     "https://api.socialmap-berlin.de",                
-                "frontendLocation":    "https://socialmap-berlin.de",
-                "statsLocation":       "https://stats.socialmap-berlin.de",
-                "publicItems":         "https://public.socialmap-berlin.de/items",
+			       
+	"backendLocation":     "https://api.socialmap-berlin.de",                
+	"frontendLocation":    "https://socialmap-berlin.de",
+	"statsLocation":       "https://stats.socialmap-berlin.de",
+	"publicItems":         "https://public.socialmap-berlin.de/items",
 
-                "title":                "social map",
-                "disableLists":         true,
-                "languages":            ["de", "en"],
-                "adminLanguages":       ["none"],
-                "activeIconColor":      "#084c8e",
-                "plainIconColor":       "#666666",
-                "pages":                ["home", "tags", "about", "contact", "tiles", "manual", "entries", "acc_lang", "legal"],
-                "adminPages":           [
-                                                "options",
-                                                "icons"
-                                        ],
-                "map":{
-                                "center":               [52.518611,13.408333],
-                                "zoom":                 10,
-                                "minZoom":              11,
-                                "maxZoom":              18,
-                                "maxBounds":            [[52.8,13.8],[52.2,13]],
-                                "maxClusterRadius":     60,
+	"title":                "social map",
+	"disableLists":         true,
+	"languages":            ["de", "en"],
+	"adminLanguages":       ["none"],
+	"activeIconColor":      "#084c8e",
+	"plainIconColor":       "#666666",
+	"pages":                ["home", "tags", "about", "contact", "tiles", "manual", "entries", "acc_lang", "legal"],
+	"adminPages":           [
+					"options",
+					"icons"
+				],
+	"map":{
+			"center":               [52.518611,13.408333],
+			"zoom":                 10,
+			"minZoom":              11,
+			"maxZoom":              18,
+			"maxBounds":            [[52.8,13.8],[52.2,13]],
+			"maxClusterRadius":     60,
 
-                                "tiles":               "https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicmhvdGVwIiwiYSI6ImNqMGRib2dmYTAwMGEzMnBkNDBuZ2dqMHMifQ.LNUbADugC76iQ91I73xFwg",
-				"xtiles":		"http://157.90.4.210:8095/{z}/{x}/{y}",
-                                "consent":              {
-                                                                "server":       "mapbox.com, USA",
-                                                                "default":      true
-                                                        }
+			"tiles":               "https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicmhvdGVwIiwiYSI6ImNqMGRib2dmYTAwMGEzMnBkNDBuZ2dqMHMifQ.LNUbADugC76iQ91I73xFwg",
+			"xtiles":		"http://157.90.4.210:8095/{z}/{x}/{y}",
+			"consent":              {
+							"server":       "mapbox.com, USA",
+							"default":      true
+						}
 
-		},
-		"sharing": {
-				"twitter": {
-						"hashtag": ""
-				},
-				"facebook": true,
-				"whatsapp": true,
-				"email": true
-		}, 
-                "suggestions":{
-                        "requireName": "both",
-                        "requireMail": "both",
-                        "requireApiKey": "new"
-                },               
-                "webfonts": [
-                        {
-                                "fontFamily":   "myriad-pro",
-                                "url":          "https://use.typekit.net/ylt7opr.css",
-                                "consent":      {
-                                                        "server":       "typekit.net, USA",
-                                                        "default":      true
-                                                }
-                        }
-                ],
-                "voiceReader": {
-                        "baseUrl":      "https://socialmap-berlin.de"
-                },
+	},
+	"sharing": {
+			"twitter": {
+					"hashtag": ""
+			},
+			"facebook": true,
+			"whatsapp": true,
+			"email": true
+	}, 
+	"suggestions":{
+		"requireName": "both",
+		"requireMail": "both",
+		"requireApiKey": "new"
+	},               
+	"webfonts": [
+		{
+			"fontFamily":   "myriad-pro",
+			"url":          "https://use.typekit.net/ylt7opr.css",
+			"consent":      {
+						"server":       "typekit.net, USA",
+						"default":      true
+					}
+		}
+	],
+	"voiceReader": {
+		"baseUrl":      "https://socialmap-berlin.de"
+	},
 
-                "export":{
-                        "properties": ["title", "description", "primaryTopic", "address", "zip", "contact", "email", "phone"],
-                        "tagGroups": ["districts", "target_groups", "options_ri"]
-                }
+	"export":{
+		"properties": ["title", "description", "primaryTopic", "address", "zip", "contact", "email", "phone"],
+		"tagGroups": ["districts", "target_groups", "options_ri"]
+	}
 }
 
