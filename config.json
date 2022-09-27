@@ -6,7 +6,7 @@
 	"publicItems":         "https://public.socialmap-berlin.de/items",
 
 	"title":                "social map",
-	"disableLists":         true,
+	"disableLists":         false,
 	"languages":            ["de", "en"],
 	"adminLanguages":       ["none"],
 	"activeIconColor":      "#084c8e",
