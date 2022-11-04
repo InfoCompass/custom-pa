@@ -422,12 +422,24 @@
 						ic-item					= "icItem"
 					></ic-item-property-edit>
 				</div>
+				
 				<button
-					class	 = "border-3 padding full"
-					ng-click = "pickCoordinates()"
+					class		= "border-3 padding"
+					ng-click	= "guessCoordinates(icEdit.city, icEdit.address, icEdit.zip)
+"
+					title		= "{{'INTERFACE.GUESS_COORDINATES' | translate}}"
+				>
+					{{'INTERFACE.GUESS_COORDINATES' | translate}}
+				</button>
+
+				<button
+					class	 	= "border-3 padding full"										
+					ng-click	= "pickCoordinates()"
+					title		= "{{'INTERFACE.PICK_COORDINATES' | translate}}"
 				>
 					{{'INTERFACE.PICK_COORDINATES' | translate}}
 				</button>
+				
 			</div>
 		</div>
 	</article>

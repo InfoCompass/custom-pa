@@ -4,7 +4,7 @@
 	"frontendLocation":    "https://socialmap-berlin.de",
 	"statsLocation":       "https://stats.socialmap-berlin.de",
 	"publicItems":         "https://public.socialmap-berlin.de/items",
-
+	"publicApi":         	"https://public.socialmap-berlin.de",
 	"title":                "social map",
 	"disableLists":         false,
 	"languages":            ["de", "en"],
