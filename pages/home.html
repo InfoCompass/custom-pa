@@ -2,13 +2,19 @@
 	<!-- <h2> <span class = "bg-0" ng-bind-html = "('INTERFACE.CLAIM' | translate)"></span></h2> -->
 	<ic-carousel
 		ic-images  		= 	"[
-								{image:'image-SMB_00', caption:'Foto: Hannah Busing/Unsplash'},
+								{
+									image:		'image-SMB_00', 
+									link:		'/list/u/list_a14929eebf8cba8f', 									
+									caption:	'Foto: Hannah Busing/Unsplash',
+									main:		'INTERFACE.CALL_TO_ACTION_ENERGY_PRIMARY', 
+									sub:		'INTERFACE.CALL_TO_ACTION_ENERGY_SECONDARY'
+								},
 
 								{
-									image:	'image-Ukraine', 
-									link:	'/list/c/refugees', 
-									main:	'INTERFACE.CALL_TO_ACTION_UKRAINE_PRIMARY', 
-									sub:	'INTERFACE.CALL_TO_ACTION_UKRAINE_SECONDARY'
+									image:		'image-Ukraine', 
+									link:		'/list/c/refugees', 
+									main:		'INTERFACE.CALL_TO_ACTION_UKRAINE_PRIMARY', 
+									sub:		'INTERFACE.CALL_TO_ACTION_UKRAINE_SECONDARY'
 								},
 								{image:'image-SMB_01', caption:'Foto: Martin Thoma'},
 								{image:'image-SMB_02', caption:'Foto: Yakobchuk Olena'},
@@ -20,7 +26,6 @@
 		ic-position-as	=	"carouselPos"
 	>
 		<div class = "call-to-action">
-
 			<a 
 				class 	=	"image image-accessible_language"
 				ng-href =	"/p/acc_lang"	 		
