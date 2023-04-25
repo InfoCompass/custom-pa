@@ -105,6 +105,16 @@
 	]
 
 	exports.types = []
+	// 	{
+	// 		name:		'location',
+	// 		colors:		['#015ca9', '#015ca9'],
+	// 	},		
+	// 	{
+	// 		name:		'unknown',
+	// 		colors:		['#888', '#888'],
+	// 	}		
+	// ]
+
 
 	exports.tags = {
 
