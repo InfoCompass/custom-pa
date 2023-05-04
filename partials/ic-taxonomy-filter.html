@@ -1,4 +1,54 @@
-<section class = "categories" ng-if = "ic.taxonomy.categories && ic.taxonomy.categories.length > 0">
+<section 
+	class = "types bg-0" 
+	ng-if = "ic.taxonomy.types && ic.taxonomy.types.length > 0"
+>
+
+	<button
+		class 		= "icon icon-interface-radio"
+		ng-class	= "{'bg-3 white checked':ic.filterConfig.typeCleared()}"
+		ng-click	= "ic.filterConfig.clearType()" 
+		ic-touch-me	= "true"
+	>
+		<div>{{'INTERFACE.FILTER_ANY' | translate}}</div>
+	</button>
+
+	<button
+		ng-repeat 	= "type in ic.taxonomy.types"
+		class 		= "icon icon-type-{{::type.name}}"
+		ic-button	= "{active:ic.filterConfig.typeActive(type.name), disabled: !ic.itemStorage.currentStats.altMatches[type.name]}"
+		ng-class	= "{'bg-3 white':active, disabled: disabled}"
+		ng-click	= "!disabled && ic.filterConfig.toggleType(type.name, undefined, true)"
+		ic-touch-me	= "!disabled"
+	>
+		<div>{{'TYPES.%s' | fill : type.name |translate}} </div>
+		<span 
+			class 		= "bubble shade-light"
+			ng-class	= "{'col-2': active, 'col-1': !active}"
+			ng-if 		= "!disabled"
+		>
+			<span>
+				{{ic.itemStorage.currentStats.altMatches[type.name]}}
+			</span>
+			<span ng-if = "ic.itemStorage.currentStats.altMatches[type.name] != ic.itemStorage.currentStats.totals[type.name]">
+				/
+			</span>
+			<span ng-if = "ic.itemStorage.currentStats.altMatches[type.name] != ic.itemStorage.currentStats.totals[type.name]">
+				{{ic.itemStorage.currentStats.totals[type.name]}}
+			</span>
+		</span>
+	</button>
+
+</section>
+
+<ic-taxonomy-filter-categories
+	expanded 				= "true"
+	show-sub-categories 	= "false"
+>
+</ic-taxonomy-filter-categories>
+
+
+
+<!-- <section class = "categories" ng-if = "ic.taxonomy.categories && ic.taxonomy.categories.length > 0">
 	<h2 
 		class 		= "bg-0 icon"
 		ng-class	= "{'icon-interface-down': expand.categories, 'icon-interface-right': !expand.categories}"
@@ -45,7 +95,7 @@
 			</span>
 		</li>
 	</ul>
-</section>
+</section> -->
 
 
 <section 
