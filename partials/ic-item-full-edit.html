@@ -207,6 +207,26 @@
 	class = "bg-0 padding"
 >
 
+	<!-- tags/type -->
+	<article>
+		<div> <!-- spacer --> </div>
+		<div>
+			<h4> {{'ITEMS.TYPE' | translate}}</h4>
+
+			<ic-item-property-edit
+				class						= "long-labels"
+				ic-item						= "icItem"
+				ic-type						= "array"
+				ic-translation-key			= "type"
+				ic-options					= "ic.taxonomy.types | mapToKey : 'name' | preventLoop"
+				ic-option-label				= "'TYPES.%s' | fill: option | translate"
+				ic-option-icon-class		= "'icon-type-' + option"
+				ic-allow-multiple-choices	= "false"
+				ic-force-choice				= "true"
+				ic-key						= "tags"
+			></ic-item-property-edit>
+		</div>
+	</article>
 
 	<!-- title -->
 
@@ -346,7 +366,7 @@
 				ic-type						= "string"
 				ic-key						= "location_ref"
 				ic-translation-key			= "location_ref"
-				ic-options					= "ic.itemStorage.data | mapToKey : 'id' | preventLoop"
+				ic-options					= "ic.itemStorage.data | icTags : ['location'] | mapToKey : 'id' | preventLoop"
 				ic-options-filter-limit		= "5"				
 				ic-option-filter-key		= "option ? ic.itemStorage.getItem(option).title + ', ' +ic.itemStorage.getItem(option).address : '' "
 				ic-option-label				= "option ? ic.itemStorage.getItem(option).title + ', ' +ic.itemStorage.getItem(option).address : '' "
