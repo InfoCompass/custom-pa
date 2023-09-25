@@ -164,6 +164,7 @@
 			'farsi',
 			'french',
 			'greek',
+			'german',
 			'german_sign_langauge',
 			'georgian',
 			'yoruba',
