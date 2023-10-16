@@ -1,8 +1,8 @@
 <div 
-	class 		= "outer-icon icon {{ (icItem|icType).name == 'location' ? 'icon-marker-location' : 'icon-marker-'+((icItem|icCategory).name || 'unknown')}}"
+	class 		= "outer-icon icon {{ 'icon-marker-'+((icItem|icCategory).name || 'unknown') }}"
 >
 	<div 
-		class = "inner-icon icon {{ (icItem|icType).name == 'location' ? 'icon-type-location' : 'icon-category-'+(icItem|icCategory).name}} white" 
+		class = "inner-icon icon {{ 'icon-category-'+(icItem|icCategory).name }} white" 
 		ng-if = "icItem"
 	></div>
 	<div 
