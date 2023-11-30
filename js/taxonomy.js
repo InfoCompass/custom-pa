@@ -128,7 +128,10 @@
 			'disability_background',	//Menschen mit Behinderung
 			'refugee_background',		//Menschen mit Fluchtgeschichte
 			'migration_background',		//Menschen mit Migrationsgeschichte
-			'houseless'					//Wohnungs-und obdachlose Menschen
+			'houseless',					//Wohnungs-und obdachlose Menschen
+			'people_in_mental_distress',		//Menschen in psychischer Notlage
+			'addicted_persons',		//Menschen mit Suchterkrankung
+			'dependents'		//Angehörige
 		],	
 		districts: [
 			'mitte',
