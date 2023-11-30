@@ -235,10 +235,12 @@
 	>
 	</ic-item-property>
 
+
 	<!-- link to references item -->
 
 	<ic-item-property
 		ng-if 			= 	"item.location_ref"
+		ic-title 		= 	"'ITEMS.REFERENCE_ADDRESS' | translate"
 		ic-content		=	"(item.location_ref | icItem) | icFullTitle"
 		ic-content-link	=	"{activeItem: (item.location_ref | icItem) } | icLink"
 		ic-extra-lines	=	"[ (item.location_ref | icItem).brief[ic.site.currentLanguage] ]"
