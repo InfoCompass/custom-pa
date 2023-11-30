@@ -92,15 +92,7 @@
 			name:	'offender_services',	//Straffälligenhilfe
 			colors:	['#7a88dc'],
 			tags:	[]
-		},
-
-		{
-			name:	'refugees',				//Geflüchtete Menschen u.a. aus der Ukraine
-			colors:	['#03D342'],
-			tags:	[],
-			pos:	1
 		}
-
 
 	]
 
