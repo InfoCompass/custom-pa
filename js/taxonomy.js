@@ -92,7 +92,14 @@
 			name:	'offender_services',	//Straffälligenhilfe
 			colors:	['#7a88dc'],
 			tags:	[]
+		},
+
+		{
+			name:	'lobby',				//Interessenvertretung
+			colors:	['#03D342'],
+			tags:	[]
 		}
+
 
 	]
 
