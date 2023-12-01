@@ -207,98 +207,38 @@
 	class = "bg-0 padding"
 >
 
-	<!-- tags/type -->
+<!-- responsible institution (options)-->
+
 	<article>
 		<div> <!-- spacer --> </div>
 		<div>
-			<h4> {{'ITEMS.TYPE' | translate}}</h4>
+			<h4> {{'ITEMS.RESPONSIBLE_INSTITUTION' | translate}}</h4>
+
+			<a 
+				class		= "bg-3 white mini icon icon-interface-cogwheel round"
+				ng-if		= "ic.user.can('edit_options')"
+				ng-href 	= "/p/options"
+			>
+			</a>
+
 
 			<ic-item-property-edit
 				class						= "long-labels"
 				ic-item						= "icItem"
-				ic-type						= "array"
-				ic-translation-key			= "type"
-				ic-options					= "ic.taxonomy.types | mapToKey : 'name' | preventLoop"
-				ic-option-label				= "'TYPES.%s' | fill: option | translate"
-				ic-option-icon-class		= "'icon-type-' + option"
-				ic-allow-multiple-choices	= "false"
-				ic-force-choice				= "true"
+				ic-type 					= "array"
+				ic-translation-key			= "responsible_institution"
+				ic-options					= "ic.taxonomy.tags.options_ri"							
+				ic-options-filter-limit		= "5"
+				ic-option-label				= "ic.options.getLabel(option)"	
+				ic-option-filter-key		= "ic.options.getLabel(option)"
+				ic-allow-multiple-choices	= "true"
 				ic-key						= "tags"
 			></ic-item-property-edit>
-		</div>
-	</article>
-
-	<!-- title -->
-
-	<article>
-		<div> <!-- spacer --> </div>
-		<div>
-			<h4> {{'ITEMS.TITLE' | translate}}</h4>
-
-			<ic-item-property-edit
-				ic-item					= "icItem"
-				ic-type 				= "string"
-				ic-key					= "title"
-			></ic-item-property-edit>
-		</div>
-	</article>
-
-
-	<!-- brief -->
-	<article>
-		<div> <!-- spacer --> </div>
-		<div>
-			<h4> {{'ITEMS.BRIEF' | translate}} ({{'LANGUAGES.%s' | fill: ic.site.currentLanguage | translate}})</h4>
-
-			<ic-item-property-edit
-				ic-item					= "icItem"
-				ic-key					= "brief"
-				ic-type 				= "string"
-				ic-translatable			= "true"
-			></ic-item-property-edit>
-		</div>
-	</article>
-
-
-	<!-- description -->
-	<article>
-		<div> <!-- spacer --> </div>
-		<div>
-			<h4> {{'ITEMS.DESCRIPTION' | translate}} ({{'LANGUAGES.%s' | fill: ic.site.currentLanguage | translate}})</h4>
 			
-			<ic-item-property-edit
-				ic-item					= "icItem"
-				ic-key					= "description"
-				ic-type 				= "text"
-				ic-translatable			= "true"
-			></ic-item-property-edit>
 		</div>
 	</article>
-
-
-
-	<!-- image -->
-	<article ng-if ="ic.user.can('edit_items')">
-		<div> <!-- spacer --> </div>
-		<div>
-			<h4> {{'ITEMS.IMAGE' | translate}}</h4>
-
-			<ic-help ic-message = "ITEMS.IMAGE_HELP"></ic-help>
-
-			<ic-item-property-edit
-				ic-type 				= "string"
-				ic-key					= "image"
-				ic-item					= "icItem"
-			></ic-item-property-edit>
-		</div>
-	</article>
-
-
-
 
 	<div><div> <!-- spacer --> </div><hr class  = "bg-2"/></div>
-
-	
 
 	<!-- tags/category -->
 
@@ -348,6 +288,67 @@
 
 	<div><div> <!-- spacer --> </div><hr class  = "bg-2"/></div>
 
+
+
+<!-- targetgroup -->
+
+	<article 
+		ng-repeat 	= "key in ['target_groups']"
+		ng-if		= " !['option_ri', 'extra'].includes(key) && (key != 'lists' || !ic.config.disableLists)"
+	>
+		<div> <!-- spacer --> </div>
+		<div>
+			<h4> {{'ITEMS.%s' | fill : key | translate}}</h4>
+
+			<ic-help 
+				ng-if = "['target_groups', 'districts', 'languages'].indexOf(key) != -1"
+				ic-message = "{{ 'ITEMS.%s_HELP'|fill:key }}"
+			>
+			</ic-help>
+
+			<ic-item-property-edit
+				ng-if						= "key != 'extra'"
+				ic-item						= "icItem"
+				ic-type						= "array"
+				ic-translation-key			= "{{key}}"
+				ic-options					= "ic.taxonomy.tags[key]"
+				ic-option-label				= "'UNSORTED_TAGS.%s' | fill: option | translate"
+				ic-check-all				= "key == 'districts'"
+				ic-allow-multiple-choices	= "true"
+				ic-key						= "tags"
+			></ic-item-property-edit>
+
+
+		</div>
+	</article>
+
+	<div><div> <!-- spacer --> </div><hr class  = "bg-2"/></div>
+
+
+	<!-- tags/type -->
+	<article>
+		<div> <!-- spacer --> </div>
+		<div>
+			<h4> {{'ITEMS.TYPE' | translate}}</h4>
+
+			<ic-item-property-edit
+				class						= "long-labels"
+				ic-item						= "icItem"
+				ic-type						= "array"
+				ic-translation-key			= "type"
+				ic-options					= "ic.taxonomy.types | mapToKey : 'name' | preventLoop"
+				ic-option-label				= "'TYPES.%s' | fill: option | translate"
+				ic-option-icon-class		= "'icon-type-' + option"
+				ic-allow-multiple-choices	= "false"
+				ic-force-choice				= "true"
+				ic-key						= "tags"
+			></ic-item-property-edit>
+		</div>
+	</article>
+
+	<div><div> <!-- spacer --> </div><hr class  = "bg-2"/></div>
+
+	<!-- adress -->
 
 	<div>
 		<div><div class = "icon icon-property-location"></div></div>
@@ -487,42 +488,92 @@
 	
 	<div><div> <!-- spacer --> </div><hr class  = "bg-2"/></div>
 
-	
-	<!-- responsible institution (options)-->
+	<!-- tags/unsorted -->
+
+		<article 
+			ng-repeat 	= "key in ['districts', 'institution_type', 'service_type']"
+			ng-if		= " !['option_ri', 'extra'].includes(key) && (key != 'lists' || !ic.config.disableLists)"
+		>
+			<div> <!-- spacer --> </div>
+			<div>
+				<h4> {{'ITEMS.%s' | fill : key | translate}}</h4>
+
+				<ic-help 
+					ng-if = "['target_groups', 'districts', 'languages'].indexOf(key) != -1"
+					ic-message = "{{ 'ITEMS.%s_HELP'|fill:key }}"
+				>
+				</ic-help>
+
+				<ic-item-property-edit
+					ng-if						= "key != 'extra'"
+					ic-item						= "icItem"
+					ic-type						= "array"
+					ic-translation-key			= "{{key}}"
+					ic-options					= "ic.taxonomy.tags[key]"
+					ic-option-label				= "'UNSORTED_TAGS.%s' | fill: option | translate"
+					ic-check-all				= "key == 'districts'"
+					ic-allow-multiple-choices	= "true"
+					ic-key						= "tags"
+				></ic-item-property-edit>
+
+
+			</div>
+		</article>
+
+
+		
+
+		<div><div> <!-- spacer --> </div><hr class  = "bg-2"/></div>
+
+	<!-- title -->
 
 	<article>
 		<div> <!-- spacer --> </div>
 		<div>
-			<h4> {{'ITEMS.RESPONSIBLE_INSTITUTION' | translate}}</h4>
-
-			<a 
-				class		= "bg-3 white mini icon icon-interface-cogwheel round"
-				ng-if		= "ic.user.can('edit_options')"
-				ng-href 	= "/p/options"
-			>
-			</a>
-
+			<h4> {{'ITEMS.TITLE' | translate}}</h4>
 
 			<ic-item-property-edit
-				class						= "long-labels"
-				ic-item						= "icItem"
-				ic-type 					= "array"
-				ic-translation-key			= "responsible_institution"
-				ic-options					= "ic.taxonomy.tags.options_ri"							
-				ic-options-filter-limit		= "5"
-				ic-option-label				= "ic.options.getLabel(option)"	
-				ic-option-filter-key		= "ic.options.getLabel(option)"
-				ic-allow-multiple-choices	= "true"
-				ic-key						= "tags"
+				ic-item					= "icItem"
+				ic-type 				= "string"
+				ic-key					= "title"
 			></ic-item-property-edit>
-			
 		</div>
 	</article>
 
-	<div><div> <!-- spacer --> </div><hr class  = "bg-2"/></div>
+
+	<!-- brief -->
+	<article>
+		<div> <!-- spacer --> </div>
+		<div>
+			<h4> {{'ITEMS.BRIEF' | translate}} ({{'LANGUAGES.%s' | fill: ic.site.currentLanguage | translate}})</h4>
+
+			<ic-item-property-edit
+				ic-item					= "icItem"
+				ic-key					= "brief"
+				ic-type 				= "string"
+				ic-translatable			= "true"
+			></ic-item-property-edit>
+		</div>
+	</article>
 
 
-		<!-- hours -->
+	<!-- description -->
+	<article>
+		<div> <!-- spacer --> </div>
+		<div>
+			<h4> {{'ITEMS.DESCRIPTION' | translate}} ({{'LANGUAGES.%s' | fill: ic.site.currentLanguage | translate}})</h4>
+			
+			<ic-item-property-edit
+				ic-item					= "icItem"
+				ic-key					= "description"
+				ic-type 				= "text"
+				ic-translatable			= "true"
+			></ic-item-property-edit>
+		</div>
+	</article>
+
+
+	<!-- hours -->
 	<article>
 		<div> <!-- spacer --> </div>
 		<div>
@@ -540,15 +591,16 @@
 		</div>
 	</article>
 
-
-
 	<div><div> <!-- spacer --> </div><hr class  = "bg-2"/></div>
 
+<!-- XX barrierefreiheit -->
 
-	<!-- tags/unsorted -->
+<!-- XX languages -->
+
+<!-- tags/unsorted -->
 
 	<article 
-		ng-repeat 	= "key in ['target_groups', 'districts', 'languages', 'accessibility',  'institution_type', 'service_type']"
+		ng-repeat 	= "key in ['accessibility', 'languages']"
 		ng-if		= " !['option_ri', 'extra'].includes(key) && (key != 'lists' || !ic.config.disableLists)"
 	>
 		<div> <!-- spacer --> </div>
@@ -577,45 +629,11 @@
 		</div>
 	</article>
 
-
-	
-
 	<div><div> <!-- spacer --> </div><hr class  = "bg-2"/></div>
 
+<!-- start/end -->
 
-	<!-- misc-->
-	<article ng-repeat = "key in ['contact', 'email', 'phone']">
-		<div> <div class = "icon icon-property-{{key}}"></div> </div>
-		<div>
-			<h4> {{'ITEMS.%s' | fill : key | translate}}</h4>
-
-			<ic-item-property-edit
-				ic-type 				= "string"
-				ic-key					= "{{key}}"
-				ic-item					= "icItem"
-			></ic-item-property-edit>
-		</div>
-	</article>
-
-	<div><div> <!-- spacer --> </div><hr class  = "bg-2"/></div>
-
-	<article ng-repeat = "key in ['website', 'facebook', 'twitter', 'instagram', 'youtube', 'vimeo', 'telegram', 'whatsapp']">
-		<div> <div class = "icon icon-property-{{key}}"></div> </div>
-		<div>
-			<h4> {{'ITEMS.%s' | fill : key | translate}}</h4>
-
-			<ic-item-property-edit
-				ic-type 				= "string"
-				ic-key					= "{{key}}"
-				ic-item					= "icItem"
-			></ic-item-property-edit>
-		</div>
-	</article>
-
-
-	<div><div> <!-- spacer --> </div><hr class  = "bg-2"/></div>
-
-	<article>
+<article>
 		<div> <!-- spacer --> </div>
 		<div class = "flex flex-space flex-wrap">
 			<div class = "flex-grow">
@@ -649,6 +667,43 @@
 	<div><div> <!-- spacer --> </div><hr class  = "bg-2"/></div>
 
 
+
+	<!-- contact -->
+	
+
+	<!-- misc-->
+	<article ng-repeat = "key in ['contact', 'email', 'phone']">
+		<div> <div class = "icon icon-property-{{key}}"></div> </div>
+		<div>
+			<h4> {{'ITEMS.%s' | fill : key | translate}}</h4>
+
+			<ic-item-property-edit
+				ic-type 				= "string"
+				ic-key					= "{{key}}"
+				ic-item					= "icItem"
+			></ic-item-property-edit>
+		</div>
+	</article>
+
+	<div><div> <!-- spacer --> </div><hr class  = "bg-2"/></div>
+
+	<article ng-repeat = "key in ['website', 'facebook', 'twitter', 'instagram', 'youtube', 'vimeo', 'telegram', 'whatsapp']">
+		<div> <div class = "icon icon-property-{{key}}"></div> </div>
+		<div>
+			<h4> {{'ITEMS.%s' | fill : key | translate}}</h4>
+
+			<ic-item-property-edit
+				ic-type 				= "string"
+				ic-key					= "{{key}}"
+				ic-item					= "icItem"
+			></ic-item-property-edit>
+		</div>
+	</article>
+
+
+	<div><div> <!-- spacer --> </div><hr class  = "bg-2"/></div>
+
+	
 
 	<article ng-if = "ic.user.can('edit_items')" >
 		<div> <!-- spacer --> </div>
