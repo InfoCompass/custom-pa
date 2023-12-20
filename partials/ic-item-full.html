@@ -125,8 +125,6 @@
 		<ic-taxonomy-tag-list ic-tags = "item.primaryTopic"></ic-tag-list>
 	</article>
 
-
-
 	<!-- start item title, brief description -->
 	<article class = "main">
 		<div>
@@ -200,7 +198,16 @@
 	<!-- end item title -->
 
 
+	<!-- link to references item -->
 
+	<ic-item-property
+		ng-if 			= 	"item.location_ref"
+		ic-title 		= 	"'ITEMS.REFERENCE_ADDRESS' | translate"
+		ic-content		=	"(item.location_ref | icItem) | icFullTitle"
+		ic-content-link	=	"{activeItem: (item.location_ref | icItem) } | icLink"
+		ic-extra-lines	=	"[ (item.location_ref | icItem).brief[ic.site.currentLanguage] ]"
+	>
+	</ic-item-property>
 
 
 	<!-- address -->
@@ -236,19 +243,6 @@
 	</ic-item-property>
 
 
-	<!-- link to references item -->
-
-	<ic-item-property
-		ng-if 			= 	"item.location_ref"
-		ic-title 		= 	"'ITEMS.REFERENCE_ADDRESS' | translate"
-		ic-content		=	"(item.location_ref | icItem) | icFullTitle"
-		ic-content-link	=	"{activeItem: (item.location_ref | icItem) } | icLink"
-		ic-extra-lines	=	"[ (item.location_ref | icItem).brief[ic.site.currentLanguage] ]"
-	>
-	</ic-item-property>
-
-
-
 	<!-- geo coordinates -->
 
 	<article>
@@ -271,6 +265,40 @@
 		ic-extra-links	= "{'Google Maps' : GMLink, 'OpenStreetMap' : OSMLink}"
 	>
 	</ic-item-property>
+
+	<!-- hours -->
+
+	<ic-item-property
+		ng-if			= "item.hours[ic.site.currentLanguage]"
+		ic-title 		= "'ITEMS.HOURS' | translate"
+		ic-icon			= "'property-time'"
+		ic-content		= "item.hours[ic.site.currentLanguage]"
+	>
+	</ic-item-property>
+
+	<!-- languages -->
+
+	<ic-item-property
+		class			= ""
+		ng-if			= "(item.tags | icUnsortedTags : 'languages').length"
+		ic-title 		= "'ITEMS.LANGUAGES' | translate"	
+		ic-content		= "(item.tags | icUnsortedTags : 'languages'  | mapExpression: '\'UNSORTED_TAGS.%s\' | fill: x | translate' : this).join(', ')"
+		ic-icon			= "'property-languages'"
+	>
+	<h1>Languages</h1>
+	</ic-item-property>
+	
+	<!-- accessibility -->
+	<ic-item-property
+		ng-repeat		= "tagGroup in ['accessibility']"
+		ng-if			= "(item | icUnsortedTags : tagGroup).length"	
+		ic-title 		= "'ITEMS.%s' | fill : tagGroup | translate"
+		ic-extra-lines	= "item | icUnsortedTags : tagGroup | mapExpression : '\'UNSORTED_TAGS.%s\' | fill : x | translate ' : this"
+		ic-icon			= "'property-'+tagGroup"		
+	>
+	</ic-item-property>
+
+	
 
 	<!-- misc -->
 
@@ -295,30 +323,6 @@
 		class		= "screen-only"
 	>
 	</ic-item-property>
-
-	
-
-	<!-- hours -->
-
-	<ic-item-property
-		ng-if			= "item.hours[ic.site.currentLanguage]"
-		ic-title 		= "'ITEMS.HOURS' | translate"
-		ic-icon			= "'property-time'"
-		ic-content		= "item.hours[ic.site.currentLanguage]"
-	>
-	</ic-item-property>
-	
-
-	<!-- accessibility -->
-	<ic-item-property
-		ng-repeat		= "tagGroup in ['accessibility']"
-		ng-if			= "(item | icUnsortedTags : tagGroup).length"	
-		ic-title 		= "'ITEMS.%s' | fill : tagGroup | translate"
-		ic-extra-lines	= "item | icUnsortedTags : tagGroup | mapExpression : '\'UNSORTED_TAGS.%s\' | fill : x | translate ' : this"
-		ic-icon			= "'property-'+tagGroup"		
-	>
-	</ic-item-property>
-
 
 
 	<!-- project start /end -->
