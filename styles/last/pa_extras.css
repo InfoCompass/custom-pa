@@ -1,3 +1,15 @@
+/*basic stylings*/
+
+
+.ic-margin-bottom {
+	margin-bottom: 2rem;
+}
+
+
+
+/*footer*/
+
+
 ic-footer .image {
 	height:					6rem;
 	width:					20rem;
@@ -13,7 +25,6 @@ ic-header .logo {
 	justify-content:		flex-start;
 	margin-left:			2rem;
 }
-
 
 
 
@@ -191,5 +202,3 @@ ic-header .logo ic-logo-full {
 ic-header .tools ic-logo-line {
 	font-size:						2rem;
 }
-
-
