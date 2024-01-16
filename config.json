@@ -61,7 +61,8 @@
 
 	"export":{
 		"properties": ["primaryTopic", "title", "website", "contact", "address", "zip", "email", "phone", "description"],
-		"tagGroups": ["target_groups", "districts", "options_ri"]
+		"tagGroups": ["target_groups", "districts", "options_ri"],
+		"restrictTranslations": ["de"]
 	}
 }
 
