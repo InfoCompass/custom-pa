@@ -244,7 +244,9 @@
 			'retirement_home',			//Seniorenheim
 			'nursing_home',				//Pflegeheim
 			'interpreting_service',		//Dolmetscherdienst
-			'contact_point_ce'			//Kontaktstelle PflegeEngagement
+			'contact_point_ce',			//Kontaktstelle PflegeEngagement
+			'special_housing',			//Besondere Wohnform
+			'day_care'			//Tagepflege
 		],
 
 		service_type: [
