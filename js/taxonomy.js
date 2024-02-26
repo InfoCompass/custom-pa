@@ -96,7 +96,7 @@
 
 		{
 			name:	'lobby',				//Interessenvertretung
-			colors:	['#03D342'],
+			colors:	['#78C251'],
 			tags:	[]
 		}
 
