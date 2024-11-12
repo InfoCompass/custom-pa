@@ -348,12 +348,20 @@
 
 	<div><div> <!-- spacer --> </div><hr class  = "bg-2"/></div>
 
-	<!-- adress -->
-
-	<div>
-		<div><div class = "icon icon-property-location"></div></div>
-		<h4>{{'ITEMS.FULL_ADDRESS' | translate}}</h4>
-	</div>
+	<!-- sponsors --> 
+	<article>
+		<div> <!-- spacer --> </div>		
+		<div>
+			<h4>{{'ITEMS.SPONSORS' | translate}}</h4>
+				
+			<ic-item-property-edit
+				ic-type 				= "string"
+				ic-key					= "sponsors"
+				ic-item					= "icItem"
+				ic-standard-values		= "['Land Berlin', 'Bezirk', 'ESF/EFRE']"
+			></ic-item-property-edit>
+		</div>
+	</article>
 
 	<!-- location_ref -->
 
