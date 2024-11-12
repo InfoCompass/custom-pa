@@ -246,7 +246,8 @@
 			'interpreting_service',		//Dolmetscherdienst
 			'contact_point_ce',			//Kontaktstelle PflegeEngagement
 			'special_housing',			//Besondere Wohnform
-			'day_care'			//Tagepflege
+			'day_care',					//Tagepflege
+			'women_center'				//Frauenzentrum
 		],
 
 		service_type: [
