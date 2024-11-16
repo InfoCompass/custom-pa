@@ -1,0 +1,145 @@
+<nav ic-no-tab>
+	<button 
+		class 		= "bg-0 icon icon-interface-close large"
+		ng-click	= "ic.site.activeItem = null"
+		ng-if		= "!ic.site.editItem"
+	>
+	</button>
+
+	<button 
+		class 		= "bg-0 icon icon-interface-close large"
+		ng-if		= "ic.site.editItem"
+		ng-click 	= "cancel()"
+		title		= "{{ic.user.can('edit_items')? 'INTERFACE.CANCEL_EDIT' : 'INTERFACE.CANCEL_EDIT_SUGGESTION' | translate}}"
+		ic-touch-me
+	>
+	</button>
+
+	<button 
+		class 		= "bg-0 icon large icon-interface-up up"
+		ic-click	= "scrollTop()"
+		ic-touch-me
+	>
+	</button>
+
+	<button 
+		class 		= "bg-0 icon large icon-interface-down down"
+		ic-click	= "scrollBottom()"
+		ic-touch-me
+	>
+	</button>
+</nav>
+
+<div 
+	class 			= "tools"
+	ng-class		= "{ 'extended': showTools }"
+	ic-on-scroll	= "showTools = false"
+	ng-if			= "!ic.site.editItem"
+	ic-tab-group
+>
+
+	<button 
+		class 		= "icon round large active icon-interface-edit drop-shadow bg-0"
+		ng-click 	= "ic.site.editItem = true"
+		ng-disabled	= "!!icItem.remoteItem" 
+		title		=  "{{ic.user.can('edit_items')? 'INTERFACE.EDIT' : 'INTERFACE.EDIT_SUGGESTION' | translate}} {{icItem.remoteItem ? 'INTERFACE.REMOTE_ITEM_CANNOT_EDIT' : '' | translate}}"
+		ic-touch-me
+	>
+	</button>
+	
+	<button 
+		class 		= "icon round large active icon-interface-share drop-shadow bg-0"
+		ng-click 	= "ic.overlays.toggle('sharingMenu')" 
+		title		= "{{'INTERFACE.SHARE' | translate}}"
+		ic-touch-me
+	>
+	</button>
+
+	<button 
+		class 		= "icon round large icon-interface-favourites drop-shadow"
+		ng-if		= "!ic.user.loggedIn || ic.lists.disabled"
+		ng-class	= "{'bg-3 white': ic.favourites.contains(ic.site.activeItem), 'bg-0  active': !ic.favourites.contains(ic.site.activeItem)}"
+		ng-click 	= "ic.favourites.toggleItem(ic.site.activeItem)" 
+		title		= "{{'INTERFACE.FAVOURITE_%s' | fill : ic.favourites.contains(ic.site.activeItem) ? 'remove': 'add' | translate}}"
+		ic-touch-me
+	>
+	</button>
+
+	<button 
+		class 		= "icon round large active icon-interface-favourites drop-shadow bg-0"
+		ng-if		= "ic.user.loggedIn && !ic.lists.disabled"
+		ng-click 	= "ic.overlays.toggle('listsItem')" 
+		title		= "{{'INTERFACE.ADD_ITEM_TO_LIST' | translate}}"
+		ic-touch-me
+	>
+	</button>
+
+	<button 
+		class 		= "icon round large active icon-interface-print drop-shadow bg-0"
+		ng-click 	= "ic.site.print()" 
+		title		= "{{'INTERFACE.PRINT' | translate}}"
+		ic-touch-me
+	>
+	</button>
+
+	<button 
+		class 		= "icon round large active switch icon-interface-left drop-shadow bg-0"
+		ng-class	= "{'bg-3 white active': showTools}"
+		ng-click	= "showTools = !showTools"
+	>
+	</button>
+
+</div>
+
+<!-- EDIT -->
+
+<div 
+	class 			= "tools"
+	ng-if 			= "ic.site.editItem && !ic.site.activeItem.internal.new"
+	ng-class		= "{ 'extended': showTools }"
+	ic-on-scroll	= "showTools = false"	
+	ic-tab-group
+>
+
+	<button 
+		class 		= "icon round large active icon-interface-delete drop-shadow bg-0"
+		ng-click 	= "delete()" 
+		ng-if		= "ic.user.can('delete_items')"
+		title		= "{{'INTERFACE.DELETE' | translate}}"
+		ic-touch-me
+	>
+	</button>
+
+	<button 
+		class 		= "icon round large active icon-interface-save drop-shadow bg-0"
+		ng-click 	= "submit()" 
+		ng-if		= "ic.user.can('edit_items')"
+		title		= "{{ 'INTERFACE.SUBMIT_CHANGES' | translate}}"
+		ic-touch-me
+	>
+	</button>
+
+	<button 
+		class 		= "icon round large bg-3 white icon-interface-cancel_edit drop-shadow"
+		ng-click 	= "cancel()" 
+		ng-if		= "true"
+		title		= "{{ic.user.can('edit_items')? 'INTERFACE.CANCEL_EDIT' : 'INTERFACE.CANCEL_EDIT_SUGGESTION' | translate}}"
+		ic-touch-me
+	>
+	</button>
+
+	<button 
+		class 		= "icon round large active switch icon-interface-left drop-shadow bg-0"
+		ng-class	= "{'bg-3 white active': showTools}"
+		ng-click	= "showTools = !showTools"
+	>
+	</button>
+</div>
+
+<!-- NEW -->
+
+<div 
+	class = "tools"
+	ng-if = "ic.site.editItem && ic.site.activeItem.internal.new"
+>
+</div>
