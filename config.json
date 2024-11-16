@@ -62,17 +62,7 @@
 		"requireName": "both",
 		"requireMail": "both",
 		"requireApiKey": "new"
-	},               
-	"webfonts": [
-		{
-			"fontFamily":   "myriad-pro",
-			"url":          "https://use.typekit.net/ylt7opr.css",
-			"consent":      {
-						"server":       "typekit.net, USA",
-						"default":      true
-					}
-		}
-	],
+	},
 	"voiceReader": {
 		"baseUrl":      "https://socialmap-berlin.de"
 	},
