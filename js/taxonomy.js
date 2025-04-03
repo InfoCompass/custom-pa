@@ -98,6 +98,12 @@
 			name:	'lobby',				//Interessenvertretung
 			colors:	['#78C251'],
 			tags:	[]
+		},
+
+		{
+			name:	'encounters',			//Kontakt und Begegnung
+			colors:	['#78c251'],
+			tags:	[]
 		}
 
 

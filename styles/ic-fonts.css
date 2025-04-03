@@ -3,7 +3,7 @@ ic-tag,
 ic-page .tiles > * > small,
 .bubble
 {
-	font-family:				myriad-pro, Roboto, sans-serif;
+	font-family:				Atkinson Hyperlegible, sans-serif;
 }
 
 h1,h2,h3,h4,h5,h6,
@@ -13,14 +13,14 @@ ic-page .tiles > *,
 ic-page p,
 ic-page a.boxed
 {
-	font-family: 				myriad-pro, Roboto, sans-serif;
+	font-family: 				Atkinson Hyperlegible, sans-serif;
 }
 
 
 ic-header ic-main-menu {
-	font-family: 				myriad-pro, Roboto, sans-serif;
+	font-family: 				Atkinson Hyperlegible, sans-serif;
 }
 
 ic-header ic-main-menu ul > li > ul > li {
-	font-family: 				myriad-pro, Roboto, sans-serif;
+	font-family: 				Atkinson Hyperlegible, sans-serif;
 }
