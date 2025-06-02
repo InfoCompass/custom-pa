@@ -1,9 +1,10 @@
 {
-			       
-	"backendLocation":     "https://api.socialmap-berlin.de",                
+				   
+	"backendLocation":     "https://api.socialmap-berlin.de",
 	"frontendLocation":    "https://socialmap-berlin.de",
 	"statsLocation":       "https://stats.socialmap-berlin.de",
 	"publicItems":         "https://public.socialmap-berlin.de/items",
+	"mappo":				"http://127.0.0.1:8099",
 	"publicApi":         	"https://public.socialmap-berlin.de",
 	"tilesUrl":             "https://socialmap.placemakingberlin.de/wp-json/custom/v1/allTiles",
 	"tilesUrlToken":        "r0gF zS1Y ibDM Npw2 rt6L KQw7",
@@ -15,21 +16,21 @@
 	"plainIconColor":       "#666666",
 	"pages":                ["home", "tags", "about", "contact", "tiles", "manual", "entries", "acc_lang", "legal"],
 	 "remotePages":          {
-                                            "url": "https://socialmap.placemakingberlin.de/wp-json/custom/v1/allPages",
-                                            "pages":{
-                                                "home":                     7,
-                                                "entries":           				8,
-                                                "acc_lang":           			9,
-                                                "legal":      							10,
-                                                "about":                	 	11,
-                                                "contact":                 	12,
-                                                "manual":                  	13
-                                            },
-                                            "map": {
-                                                "id":           "id",
-                                                "translations": "translations"
-                                            }
-                                        },
+								"url": "https://socialmap.placemakingberlin.de/wp-json/custom/v1/allPages",
+								"pages":{
+								"home":                     7,
+								"entries":           		8,
+								"acc_lang":           		9,
+								"legal":      				10,
+								"about":                	11,
+								"contact":                 	12,
+								"manual":                  	13
+							},
+							"map": {
+								"id":           "id",
+								"translations": "translations"
+							}
+										},
 	"adminPages":           [
 					"options",
 					"icons"

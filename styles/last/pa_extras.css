@@ -203,3 +203,8 @@ ic-header .logo ic-logo-full {
 ic-header .tools ic-logo-line {
 	font-size:						2rem;
 }
+
+
+ic-spinner .foreground {
+	background-image:  url('/images/icons/fav_icon.svg');
+}
