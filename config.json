@@ -15,7 +15,7 @@
 	"activeIconColor":      "#084c8e",
 	"plainIconColor":       "#666666",
 	"pages":                ["home", "tags", "about", "contact", "tiles", "manual", "entries", "acc_lang", "legal"],
-	 "remotePages":          {
+	"remotePages":          {
 								"url": "https://socialmap.placemakingberlin.de/wp-json/custom/v1/allPages",
 								"pages":{
 								"home":                     7,
@@ -32,9 +32,13 @@
 							}
 										},
 	"adminPages":           [
-					"options",
-					"icons"
-				],
+								"options",
+								"icons"
+							],
+
+	"mappo":				"https://mappo-pa.place-making.org",
+
+
 	"map":{
 			"center":               [52.518611,13.408333],
 			"zoom":                 10,
