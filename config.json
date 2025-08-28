@@ -4,7 +4,6 @@
 	"frontendLocation":    "https://socialmap-berlin.de",
 	"statsLocation":       "https://stats.socialmap-berlin.de",
 	"publicItems":         "https://public.socialmap-berlin.de/items",
-	"mappo":				"http://127.0.0.1:8099",
 	"publicApi":         	"https://public.socialmap-berlin.de",
 	"tilesUrl":             "https://socialmap.placemakingberlin.de/wp-json/custom/v1/allTiles",
 	"tilesUrlToken":        "r0gF zS1Y ibDM Npw2 rt6L KQw7",
@@ -37,7 +36,6 @@
 							],
 
 	"mappo":				"https://mappo-pa.place-making.org",
-
 
 	"map":{
 			"center":               [52.518611,13.408333],
